@@ -1,0 +1,1980 @@
+// Exact Reference Listing Data matching https://airbnb-clone-phi-six-73.vercel.app/
+
+export const listingData = {
+  "id": "mirashya-ug10",
+  "hostDetails": {
+    "name": "Mirashya Homes",
+    "badge": "Host",
+    "avatarText": "MIRASHYA",
+    "avatarSubtext": "HOMES",
+    "avatarBg": "bg-[#183B32]",
+    "isVerified": true,
+    "stats": {
+      "reviews": "1,463",
+      "rating": "4.68",
+      "yearsHosting": "2"
+    },
+    "highlights": [
+      {
+        "id": "birth-decade",
+        "type": "balloon",
+        "text": "Born in the 80s"
+      },
+      {
+        "id": "education",
+        "type": "education",
+        "text": "Where I went to school: NICMAR GOA"
+      }
+    ],
+    "coHosts": [
+      {
+        "id": "cohost-1",
+        "name": "Sharath",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "cohost-2",
+        "name": "Aman Dev Pahwa",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "cohost-3",
+        "name": "Maria Karen Priyanka",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "cohost-4",
+        "name": "Simran",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "cohost-5",
+        "name": "Pallavi",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "cohost-6",
+        "name": "Sanyukta",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "cohost-7",
+        "name": "Shruti",
+        "avatarType": "initials",
+        "initial": "S",
+        "bgClass": "bg-[#FCE8F3] text-[#99154B]"
+      },
+      {
+        "id": "cohost-8",
+        "name": "Amisha",
+        "avatarType": "initials",
+        "initial": "A",
+        "bgClass": "bg-[#E1EFFE] text-[#1E429F]"
+      }
+    ],
+    "hostDetails": {
+      "responseRate": "100%",
+      "responseTime": "within an hour"
+    }
+  },
+  "thingsToKnow": {
+    "cancellationPolicy": {
+      "icon": "CalendarX",
+      "title": "Cancellation policy",
+      "description": "Free cancellation before 17 October. Cancel before check-in on 18 October for a partial refund.",
+      "subtext": "Review this host's full policy for details.",
+      "actionText": "Learn more"
+    },
+    "houseRules": {
+      "icon": "Key",
+      "title": "House rules",
+      "rules": [
+        "Check-in after 2:00 pm",
+        "Checkout before 11:00 am",
+        "3 guests maximum"
+      ],
+      "actionText": "Learn more"
+    },
+    "safetyAndProperty": {
+      "icon": "Shield",
+      "title": "Safety & property",
+      "items": [
+        "Carbon monoxide alarm not reported",
+        "Smoke alarm not reported",
+        "Exterior security cameras on property"
+      ],
+      "actionText": "Learn more"
+    }
+  },
+  "nearbyStays": [
+    {
+      "id": "stay-1",
+      "image": "/assets/s1-BNZghcZ7.jpeg",
+      "title": "Beautiful Studio with a view to die for",
+      "price": "₹23,600",
+      "rating": "4.91"
+    },
+    {
+      "id": "stay-2",
+      "image": "/assets/s2-BDBpwHIy.jpeg",
+      "title": "NAQAB - 1bhk with private pool",
+      "price": "₹42,218",
+      "rating": "4.95"
+    },
+    {
+      "id": "stay-3",
+      "image": "/assets/s3-Dd5n_mRG.jpeg",
+      "title": "Greentique Luxury Flat with plunge pool, Calangute",
+      "price": "₹44,506",
+      "rating": "4.94"
+    },
+    {
+      "id": "stay-4",
+      "image": "/assets/s4-NDZ1Kx4a.jpeg",
+      "title": "The Tropical Studio | 5 mins to Beach",
+      "price": "₹22,824",
+      "rating": "4.96"
+    },
+    {
+      "id": "stay-5",
+      "image": "/assets/s6-_G0Sxcao.jpeg",
+      "title": "Luxury Casa Bella 1BHK with plunge pool, Calangute",
+      "price": "₹39,942",
+      "rating": "4.95"
+    },
+    {
+      "id": "stay-6",
+      "image": "/assets/s2-BDBpwHIy.jpeg",
+      "title": "Serene Coastal Flat with Balcony View",
+      "price": "₹28,500",
+      "rating": "4.92"
+    },
+    {
+      "id": "stay-7",
+      "image": "/assets/s3-Dd5n_mRG.jpeg",
+      "title": "Sunset Horizon Villa with Panoramic Views",
+      "price": "₹35,200",
+      "rating": "4.97"
+    },
+    {
+      "id": "stay-8",
+      "image": "/assets/s1-BNZghcZ7.jpeg",
+      "title": "Villa Azure - Luxury 2BHK with Private Pool",
+      "price": "₹48,900",
+      "rating": "4.89"
+    }
+  ],
+  "title": "Romantic Jacuzzi 1BHK Candolim | Mirashya UG10",
+  "propertyType": "Entire serviced apartment in Candolim, India",
+  "stats": {
+    "guests": 3,
+    "bedrooms": 1,
+    "beds": 1,
+    "bathrooms": 1,
+    "subtitle": "3 guests · 1 bedroom · 1 bed · 1 bathroom"
+  },
+  "guestFavorite": {
+    "isFavorite": true,
+    "tagline": "One of the most loved homes on Airbnb, according to guests",
+    "rating": 4.95,
+    "stars": 5,
+    "reviewCount": 19
+  },
+  "host": {
+    "name": "Mirashya Homes",
+    "avatarText": "MIRASHYA",
+    "avatarBg": "bg-[#183B32]",
+    "hostingDuration": "2 years hosting",
+    "isSuperhost": true,
+    "responseRate": "100%",
+    "responseTime": "within an hour"
+  },
+  "features": [
+    {
+      "id": "outdoor-entertainment",
+      "iconName": "UtensilsCrossed",
+      "title": "Outdoor entertainment",
+      "description": "The pool and alfresco dining are great for summer trips."
+    },
+    {
+      "id": "designed-cooling",
+      "iconName": "Wind",
+      "title": "Designed for staying cool",
+      "description": "Beat the heat with the A/C and ceiling fan."
+    },
+    {
+      "id": "self-checkin",
+      "iconName": "DoorClosed",
+      "title": "Self check-in",
+      "description": "You can check in with the building staff."
+    }
+  ],
+  "translationNotice": {
+    "noticeText": "Some info has been automatically translated.",
+    "actionText": "Show original"
+  },
+  "description": {
+    "previewTop": "🌴 Plan Your Relaxing Holiday at Amor De Goa by Mirashya Homes! ✨ Stay in this cozy 1BHK in the heart of Candolim, featuring a private jacuzzi 🛁 for the perfect unwind. Enjoy high-speed WiFi 💻 , Smart TV 📺 , pet-friendly comfort 🐾 , and stylish interiors.",
+    "previewFaded": "Just minutes from Candolim Beach 🏖️ , popular cafés, restaurants, and nightlife 🍹 , it’s",
+    "full": "🌴 Plan Your Relaxing Holiday at Amor De Goa by Mirashya Homes! ✨ Stay in this cozy 1BHK in the heart of Candolim, featuring a private jacuzzi 🛁 for the perfect unwind. Enjoy high-speed WiFi 💻 , Smart TV 📺 , pet-friendly comfort 🐾 , and stylish interiors. Just minutes from Candolim Beach 🏖️ , popular cafés, restaurants, and nightlife 🍹 , it’s ideal for couples seeking romance, relaxation, and a touch of luxury in North Goa. 💖 🌴",
+    "paragraphs": [
+      "🌴 Plan Your Relaxing Holiday at Amor De Goa by Mirashya Homes! ✨",
+      "Stay in this cozy 1BHK in the heart of Candolim, featuring a private jacuzzi 🛁 for the perfect unwind. Enjoy high-speed WiFi 💻 , Smart TV 📺 , pet-friendly comfort 🐾 , and stylish interiors. Just minutes from Candolim Beach 🏖️ , popular cafés, restaurants, and nightlife 🍹 , it’s ideal for couples seeking romance, relaxation, and a touch of luxury in North Goa. 💖 🌴",
+      "The space:",
+      "• Master Bedroom: Plush queen-size bed, ambient lighting, dedicated workspace, and ensuite bathroom.",
+      "• Private Jacuzzi: State-of-the-art heated jacuzzi tub on a secluded private balcony.",
+      "• Living Area: Modern sofa-cum-bed, 55-inch 4K Smart TV with Netflix/Prime, and high-speed fiber internet.",
+      "• Fully Equipped Kitchen: Microwave, induction cooktop, refrigerator, toaster, kettle, cookware, and dining sets.",
+      "• Amenities: Air conditioning in all rooms, power backup, daily housekeeping, 24/7 security, and shared swimming pool access.",
+      "Guest access:",
+      "Guests will have private access to the entire 1BHK apartment including the private jacuzzi balcony. In addition, guests can use the building's shared outdoor swimming pool, landscaped gardens, and dedicated parking space."
+    ]
+  },
+  "pricing": {
+    "currency": "₹",
+    "totalPrice": 28499,
+    "formattedTotalPrice": "₹28,499",
+    "nights": 5,
+    "nightlyRate": 5699,
+    "formattedNightlyRate": "₹5,699",
+    "cleaningFee": 1500,
+    "serviceFee": 3990,
+    "taxes": 2850
+  },
+  "reservation": {
+    "defaultCheckIn": "10/18/2026",
+    "defaultCheckOut": "10/23/2026",
+    "defaultGuests": "2 guests",
+    "cancellationPolicy": "Free cancellation before 17 October"
+  },
+  "promo": {
+    "discountText": "Get 10% off your next stay.",
+    "termsText": "Terms apply",
+    "buttonText": "Claim"
+  },
+  "amenities": [
+    {
+      "name": "Kitchen",
+      "icon": "Kitchen"
+    },
+    {
+      "name": "Wifi",
+      "icon": "Wifi"
+    },
+    {
+      "name": "Dedicated workspace",
+      "icon": "Dedicated workspace"
+    },
+    {
+      "name": "Free parking on premises",
+      "icon": "Free parking on premises"
+    },
+    {
+      "name": "Pool",
+      "icon": "Pool"
+    },
+    {
+      "name": "Hot tub",
+      "icon": "Hot tub"
+    },
+    {
+      "name": "Pets allowed",
+      "icon": "Pets allowed"
+    },
+    {
+      "name": "Exterior security cameras on property",
+      "icon": "Exterior security cameras on property"
+    },
+    {
+      "name": "Carbon monoxide alarm",
+      "icon": "Carbon monoxide alarm",
+      "unavailable": true
+    },
+    {
+      "name": "Smoke alarm",
+      "icon": "Smoke alarm",
+      "unavailable": true
+    }
+  ],
+  "amenityCategories": [
+    {
+      "category": "Bathroom",
+      "items": [
+        {
+          "name": "Hairdryer",
+          "icon": "Hairdryer"
+        },
+        {
+          "name": "Cleaning products",
+          "icon": "Cleaning products"
+        },
+        {
+          "name": "Shampoo",
+          "icon": "Shampoo"
+        },
+        {
+          "name": "Hot water",
+          "icon": "Hot water"
+        },
+        {
+          "name": "Shower gel",
+          "icon": "Shower gel"
+        }
+      ]
+    },
+    {
+      "category": "Bedroom and laundry",
+      "items": [
+        {
+          "name": "Washing machine",
+          "icon": "Washing machine"
+        },
+        {
+          "name": "Hangers",
+          "icon": "Hangers"
+        },
+        {
+          "name": "Bed linen",
+          "icon": "Bed linen"
+        },
+        {
+          "name": "Room-darkening blinds",
+          "icon": "Room-darkening blinds"
+        },
+        {
+          "name": "Iron",
+          "icon": "Iron"
+        },
+        {
+          "name": "Clothes storage",
+          "icon": "Clothes storage"
+        },
+        {
+          "name": "Cot",
+          "icon": "Cot"
+        }
+      ]
+    },
+    {
+      "category": "Entertainment",
+      "items": [
+        {
+          "name": "TV",
+          "icon": "TV"
+        }
+      ]
+    },
+    {
+      "category": "Family",
+      "items": [
+        {
+          "name": "Cot",
+          "icon": "Cot"
+        }
+      ]
+    },
+    {
+      "category": "Heating and cooling",
+      "items": [
+        {
+          "name": "Air conditioning",
+          "icon": "Air conditioning"
+        },
+        {
+          "name": "Ceiling fan",
+          "icon": "Ceiling fan"
+        }
+      ]
+    },
+    {
+      "category": "Home safety",
+      "items": [
+        {
+          "name": "Exterior security cameras on property",
+          "icon": "Exterior security cameras on property"
+        },
+        {
+          "name": "Carbon monoxide alarm",
+          "icon": "Carbon monoxide alarm",
+          "unavailable": true
+        },
+        {
+          "name": "Smoke alarm",
+          "icon": "Smoke alarm",
+          "unavailable": true
+        }
+      ]
+    },
+    {
+      "category": "Internet and office",
+      "items": [
+        {
+          "name": "Wifi",
+          "icon": "Wifi"
+        },
+        {
+          "name": "Dedicated workspace",
+          "icon": "Dedicated workspace"
+        }
+      ]
+    },
+    {
+      "category": "Kitchen and dining",
+      "items": [
+        {
+          "name": "Kitchen",
+          "icon": "Kitchen"
+        },
+        {
+          "name": "Fridge",
+          "icon": "Fridge"
+        },
+        {
+          "name": "Freezer",
+          "icon": "Freezer"
+        },
+        {
+          "name": "Microwave",
+          "icon": "Microwave"
+        },
+        {
+          "name": "Cooking basics",
+          "icon": "Cooking basics"
+        },
+        {
+          "name": "Crockery and cutlery",
+          "icon": "Crockery and cutlery"
+        },
+        {
+          "name": "Kettle",
+          "icon": "Kettle"
+        },
+        {
+          "name": "Coffee",
+          "icon": "Coffee"
+        },
+        {
+          "name": "Wine glasses",
+          "icon": "Wine glasses"
+        },
+        {
+          "name": "Toaster",
+          "icon": "Toaster"
+        },
+        {
+          "name": "Blender",
+          "icon": "Blender"
+        },
+        {
+          "name": "Cooker",
+          "icon": "Cooker"
+        }
+      ]
+    },
+    {
+      "category": "Location features",
+      "items": [
+        {
+          "name": "Private entrance",
+          "icon": "Private entrance"
+        }
+      ]
+    },
+    {
+      "category": "Outdoor",
+      "items": [
+        {
+          "name": "Patio or balcony",
+          "icon": "Patio or balcony"
+        },
+        {
+          "name": "Outdoor dining area",
+          "icon": "Outdoor dining area"
+        }
+      ]
+    },
+    {
+      "category": "Parking and facilities",
+      "items": [
+        {
+          "name": "Free parking on premises",
+          "icon": "Free parking on premises"
+        },
+        {
+          "name": "Pool",
+          "icon": "Pool"
+        },
+        {
+          "name": "Hot tub",
+          "icon": "Hot tub"
+        },
+        {
+          "name": "Gym",
+          "icon": "Gym"
+        }
+      ]
+    },
+    {
+      "category": "Services",
+      "items": [
+        {
+          "name": "Pets allowed",
+          "icon": "Pets allowed"
+        },
+        {
+          "name": "Cleaning available during stay",
+          "icon": "Cleaning available during stay"
+        },
+        {
+          "name": "Long-term stays allowed",
+          "icon": "Long-term stays allowed"
+        },
+        {
+          "name": "Self check-in",
+          "icon": "Self check-in"
+        }
+      ]
+    }
+  ],
+  "reviews": {
+    "overallRating": 4.95,
+    "reviewCount": 19,
+    "guestFavouriteTagline": "This home is a guest favourite based on ratings, reviews and reliability",
+    "ratingDistribution": [
+      {
+        "stars": 5,
+        "percentage": 95
+      },
+      {
+        "stars": 4,
+        "percentage": 5
+      },
+      {
+        "stars": 3,
+        "percentage": 0
+      },
+      {
+        "stars": 2,
+        "percentage": 0
+      },
+      {
+        "stars": 1,
+        "percentage": 0
+      }
+    ],
+    "categories": [
+      {
+        "id": "cleanliness",
+        "name": "Cleanliness",
+        "score": "5.0",
+        "icon": "cleanliness"
+      },
+      {
+        "id": "accuracy",
+        "name": "Accuracy",
+        "score": "5.0",
+        "icon": "accuracy"
+      },
+      {
+        "id": "checkin",
+        "name": "Check-in",
+        "score": "5.0",
+        "icon": "checkin"
+      },
+      {
+        "id": "communication",
+        "name": "Communication",
+        "score": "5.0",
+        "icon": "communication"
+      },
+      {
+        "id": "location",
+        "name": "Location",
+        "score": "4.8",
+        "icon": "location"
+      },
+      {
+        "id": "value",
+        "name": "Value",
+        "score": "4.8",
+        "icon": "value"
+      }
+    ],
+    "keywordTags": [
+      {
+        "id": "comfort",
+        "label": "Comfort",
+        "count": 6,
+        "emoji": "🛋️"
+      },
+      {
+        "id": "accuracy",
+        "label": "Accuracy",
+        "count": 5,
+        "emoji": "✅"
+      },
+      {
+        "id": "hottub",
+        "label": "Hot tub",
+        "count": 5,
+        "emoji": "🪵"
+      },
+      {
+        "id": "condition",
+        "label": "Condition",
+        "count": 4,
+        "emoji": "📋"
+      },
+      {
+        "id": "hospitality",
+        "label": "Hospitality",
+        "count": 8,
+        "emoji": "🎁"
+      },
+      {
+        "id": "cleanliness",
+        "label": "Cleanliness",
+        "count": 4,
+        "emoji": "🧴"
+      },
+      {
+        "id": "amenities",
+        "label": "Amenities",
+        "count": 2,
+        "emoji": "🍰"
+      },
+      {
+        "id": "decor",
+        "label": "Decor",
+        "count": 3,
+        "emoji": "🖼️"
+      },
+      {
+        "id": "indoor_spaces",
+        "label": "Indoor spaces",
+        "count": 4,
+        "emoji": "🏠"
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "count": 7,
+        "emoji": "📍"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "author": "Amit",
+        "avatarType": "initials",
+        "avatarBg": "bg-[#F7E8D0] text-[#7A4B17]",
+        "avatarText": "A",
+        "avatar": null,
+        "tenure": "2 months on Airbnb",
+        "rating": 5,
+        "date": "1 week ago",
+        "tags": [
+          "hospitality",
+          "comfort"
+        ],
+        "content": "Very helpful and responsive team. Safe and peaceful stay. loved everything about the property."
+      },
+      {
+        "id": 2,
+        "author": "Aheesh",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+        "tenure": "3 years on Airbnb",
+        "rating": 5,
+        "date": "2 weeks ago",
+        "tags": [
+          "cleanliness",
+          "comfort",
+          "accuracy"
+        ],
+        "content": "We had a wonderful stay. The apartment was clean, comfortable, and exactly as shown in the photos. The host was very responsive and helpful throughout our stay. We would definitely recommend this place and would love to stay here again."
+      },
+      {
+        "id": 3,
+        "author": "Samiksha",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80",
+        "tenure": "8 months on Airbnb",
+        "rating": 5,
+        "date": "May 2026",
+        "tags": [
+          "hospitality"
+        ],
+        "content": "the host nitish was really great help"
+      },
+      {
+        "id": 4,
+        "author": "Vedant",
+        "avatarType": "initials",
+        "avatarBg": "bg-[#EFE8FA] text-[#5B3E8C]",
+        "avatarText": "V",
+        "avatar": null,
+        "tenure": "4 years on Airbnb",
+        "rating": 5,
+        "date": "May 2026",
+        "tags": [
+          "cleanliness",
+          "hospitality",
+          "hottub"
+        ],
+        "content": "We had an amazing stay at this property in Goa! The entire home was spotless and exceptionally well-maintained, making us feel comfortable from the moment we arrived. The cleanliness standards were truly impressive, with every corner of the house looking fresh and pristine. The host was extremely hospitable, communicative, and ensured our stay was completely hassle-free."
+      },
+      {
+        "id": 5,
+        "author": "Vaibhav S",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&auto=format&fit=crop&q=80",
+        "tenure": "3 years on Airbnb",
+        "rating": 5,
+        "date": "May 2026",
+        "tags": [
+          "comfort",
+          "hospitality"
+        ],
+        "content": "Great great experience living out there , can't expect more , will always look for it in the future and will recommend my friends too."
+      },
+      {
+        "id": 6,
+        "author": "Mohd",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+        "tenure": "5 years on Airbnb",
+        "rating": 5,
+        "date": "May 2026",
+        "tags": [
+          "accuracy"
+        ],
+        "content": "Great place. Exactly as described in the listing."
+      },
+      {
+        "id": 7,
+        "author": "Rohan Kapoor",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "tenure": "2 years on Airbnb",
+        "rating": 5,
+        "date": "April 2026",
+        "tags": [
+          "hottub",
+          "comfort"
+        ],
+        "content": "The private jacuzzi was unbelievable! Sparkling clean, relaxing, and surrounded by plants on the balcony. Worth every single penny."
+      },
+      {
+        "id": 8,
+        "author": "Ananya Deshmukh",
+        "avatarType": "initials",
+        "avatarBg": "bg-[#FCE8E6] text-[#C5221F]",
+        "avatarText": "A",
+        "avatar": null,
+        "tenure": "1 year on Airbnb",
+        "rating": 5,
+        "date": "April 2026",
+        "tags": [
+          "location",
+          "cleanliness"
+        ],
+        "content": "Super close to Candolim beach and all the best cafes. Walking distance to supermarkets as well. 10/10 recommendation!"
+      },
+      {
+        "id": 9,
+        "author": "Carlos Mendez",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100&auto=format&fit=crop&q=80",
+        "tenure": "6 years on Airbnb",
+        "rating": 5,
+        "date": "March 2026",
+        "tags": [
+          "hospitality",
+          "amenities"
+        ],
+        "content": "Exceptional hospitality from the team. High speed wifi was rock solid for my work Zoom calls. Will be staying here again when in Goa."
+      },
+      {
+        "id": 10,
+        "author": "Pooja Verma",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80",
+        "tenure": "3 years on Airbnb",
+        "rating": 5,
+        "date": "March 2026",
+        "tags": [
+          "condition",
+          "cleanliness"
+        ],
+        "content": "The place looks identical to the photographs, if not better in person. The kitchen had everything needed for quick breakfasts."
+      },
+      {
+        "id": 11,
+        "author": "Karan Johar",
+        "avatarType": "initials",
+        "avatarBg": "bg-[#E6F4EA] text-[#137333]",
+        "avatarText": "K",
+        "avatar": null,
+        "tenure": "4 years on Airbnb",
+        "rating": 5,
+        "date": "February 2026",
+        "tags": [
+          "comfort",
+          "hottub"
+        ],
+        "content": "Best romantic getaway spot in North Goa. Peaceful ambiance yet 5 mins away from all the Candolim action."
+      },
+      {
+        "id": 12,
+        "author": "Tanvi Saxena",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=80",
+        "tenure": "2 years on Airbnb",
+        "rating": 5,
+        "date": "February 2026",
+        "tags": [
+          "hospitality",
+          "accuracy"
+        ],
+        "content": "Host was always available on WhatsApp for any small queries. Smooth contactless check-in with the security guard."
+      },
+      {
+        "id": 13,
+        "author": "David Wilson",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop&q=80",
+        "tenure": "7 years on Airbnb",
+        "rating": 5,
+        "date": "January 2026",
+        "tags": [
+          "amenities",
+          "location"
+        ],
+        "content": "Outstanding stay. The air conditioning was super powerful and the swimming pool in the complex was very clean."
+      },
+      {
+        "id": 14,
+        "author": "Divya Nambiar",
+        "avatarType": "initials",
+        "avatarBg": "bg-[#FEF7E0] text-[#B06000]",
+        "avatarText": "D",
+        "avatar": null,
+        "tenure": "5 months on Airbnb",
+        "rating": 5,
+        "date": "January 2026",
+        "tags": [
+          "cleanliness",
+          "comfort"
+        ],
+        "content": "The bed is very comfortable with premium soft linens. Housekeeping provided fresh towels on request promptly."
+      },
+      {
+        "id": 15,
+        "author": "Aditya Roy",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&auto=format&fit=crop&q=80",
+        "tenure": "4 years on Airbnb",
+        "rating": 5,
+        "date": "December 2025",
+        "tags": [
+          "hospitality"
+        ],
+        "content": "Loved our Goa vacation thanks to Mirashya Homes. Great recommendations provided for nearby restaurants and sunset viewpoints."
+      },
+      {
+        "id": 16,
+        "author": "Jessica Taylor",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+        "tenure": "3 years on Airbnb",
+        "rating": 5,
+        "date": "December 2025",
+        "tags": [
+          "accuracy",
+          "hottub"
+        ],
+        "content": "Everything was top tier. Private jacuzzi under the stars was our favorite part. Will return definitely!"
+      },
+      {
+        "id": 17,
+        "author": "Manish Joshi",
+        "avatarType": "initials",
+        "avatarBg": "bg-[#E8F0FE] text-[#1A73E8]",
+        "avatarText": "M",
+        "avatar": null,
+        "tenure": "2 years on Airbnb",
+        "rating": 5,
+        "date": "November 2025",
+        "tags": [
+          "condition",
+          "location"
+        ],
+        "content": "Spotless place, gated community with 24/7 security so we felt totally safe coming back late at night."
+      },
+      {
+        "id": 18,
+        "author": "Shruti Hegde",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=100&auto=format&fit=crop&q=80",
+        "tenure": "1 year on Airbnb",
+        "rating": 5,
+        "date": "November 2025",
+        "tags": [
+          "comfort",
+          "cleanliness"
+        ],
+        "content": "Spacious living area, great smart TV with all streaming apps logged in, and very quiet air conditioning."
+      },
+      {
+        "id": 19,
+        "author": "Vikram Malhotra",
+        "avatarType": "image",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80",
+        "tenure": "5 years on Airbnb",
+        "rating": 5,
+        "date": "October 2025",
+        "tags": [
+          "hospitality",
+          "location"
+        ],
+        "content": "Perfect location in Candolim, wonderful hosts, seamless checkin. One of the best Airbnb experiences in Goa."
+      }
+    ]
+  },
+  "location": {
+    "city": "Candolim",
+    "state": "Goa",
+    "country": "India",
+    "fullAddress": "Candolim, Goa, India",
+    "subtext": "Exact location will be provided after booking.",
+    "neighborhoodHighlightTitle": "Neighbourhood highlights",
+    "neighborhoodHighlightDescription": "Located in the heart of Candolim, Amor de Goa offers a peaceful stay with easy access to beaches, cafés, and popular attractions.",
+    "neighborhoodDescription": "Candolim is famous for its serene golden sand beach, vibrant beach shacks, high-end fine dining restaurants, and water sports. The apartment is situated in a peaceful gated community just 500 meters from Candolim main road."
+  }
+};
+export const photoCategories = [
+  {
+    "id": "living-room-1",
+    "title": "Living room 1",
+    "amenities": [
+      "Sofa",
+      "Air conditioning",
+      "Ceiling fan",
+      "TV"
+    ],
+    "coverImage": "/assets/additional-10-U6Fh-z-t.jpeg",
+    "images": [
+      "/assets/additional-10-U6Fh-z-t.jpeg",
+      "/assets/living-room-1-2-EeCJMjww.jpeg",
+      "/assets/living-room-1-3-vZ6fKh2f.jpeg"
+    ]
+  },
+  {
+    "id": "living-room-2",
+    "title": "Living room 2",
+    "amenities": [
+      "Ceiling fan",
+      "Hot tub"
+    ],
+    "coverImage": "/assets/living-room-2-1-Dcui_DLo.jpeg",
+    "images": [
+      "/assets/living-room-2-1-Dcui_DLo.jpeg",
+      "/assets/living-room-2-2-kXn5mfy1.jpeg",
+      "/assets/living-room-2-3-D6DP_NhK.jpeg",
+      "/assets/living-room-2-4-AWYqGh7w.jpeg",
+      "/assets/living-room-2-5-DmvTLEqJ.jpeg",
+      "/assets/additional-1-DUHBHKZy.jpeg",
+      "/assets/living-room-2-7-w40Q75OB.jpeg"
+    ]
+  },
+  {
+    "id": "kitchen",
+    "title": "Full kitchen",
+    "amenities": [
+      "Freezer",
+      "Fridge",
+      "Blender",
+      "Cooker",
+      "Cooking basics",
+      "Kettle",
+      "Microwave",
+      "Toaster",
+      "Wine glasses",
+      "Coffee",
+      "Crockery and cutlery"
+    ],
+    "coverImage": "/assets/kitchen1-D8YM_FVx.jpeg",
+    "images": [
+      "/assets/kitchen1-D8YM_FVx.jpeg",
+      "/assets/kitchen2-cSyHIF8F.jpeg"
+    ]
+  },
+  {
+    "id": "bedroom",
+    "title": "Bedroom",
+    "amenities": [
+      "Double bed",
+      "Air conditioning",
+      "Bed linen",
+      "Ceiling fan",
+      "Clothes storage",
+      "Cot",
+      "Hangers",
+      "Iron",
+      "Room-darkening blinds",
+      "Cleaning available during stay",
+      "Cleaning products",
+      "Long-term stays allowed",
+      "Private entrance",
+      "Wifi"
+    ],
+    "coverImage": "/assets/bedroom1-BHyDnMEq.jpeg",
+    "images": [
+      "/assets/bedroom1-BHyDnMEq.jpeg",
+      "/assets/bedroom2-E6QcUWFq.jpeg",
+      "/assets/bedroom3-YOk2EqKI.jpeg",
+      "/assets/bedroom4-C0q-WjWm.jpeg",
+      "/assets/bedroom5-CkhgeWg2.jpeg"
+    ]
+  },
+  {
+    "id": "bathroom",
+    "title": "Full bathroom",
+    "amenities": [
+      "Shower",
+      "Hot water",
+      "Towels"
+    ],
+    "coverImage": "/assets/bathroom1-BTSBvkUh.jpeg",
+    "images": [
+      "/assets/bathroom1-BTSBvkUh.jpeg"
+    ]
+  },
+  {
+    "id": "gym",
+    "title": "Gym",
+    "amenities": [
+      "Workout equipment"
+    ],
+    "coverImage": "/assets/gym1-D-KPV5Hp.jpeg",
+    "images": [
+      "/assets/gym1-D-KPV5Hp.jpeg",
+      "/assets/gym2-D6r2l8r0.jpeg",
+      "/assets/gym3-ucitmXAc.jpeg",
+      "/assets/gym4-IuQXiSu_.jpeg",
+      "/assets/gym5-DRRWi9qk.jpeg"
+    ]
+  },
+  {
+    "id": "exterior",
+    "title": "Exterior",
+    "amenities": [
+      "Building view",
+      "Parking"
+    ],
+    "coverImage": "/assets/exterior1-tHFzobJK.jpeg",
+    "images": [
+      "/assets/exterior1-tHFzobJK.jpeg",
+      "/assets/exterior2-DCdhFrS3.jpeg",
+      "/assets/exterior3-CRVx7Z8O.jpeg",
+      "/assets/exterior4-9VJPfXnE.jpeg",
+      "/assets/exterior2-DCdhFrS3.jpeg"
+    ]
+  },
+  {
+    "id": "pool",
+    "title": "Pool",
+    "amenities": [
+      "Shared outdoor pool"
+    ],
+    "coverImage": "/assets/pool1-C41aCaFt.jpeg",
+    "images": [
+      "/assets/pool1-C41aCaFt.jpeg",
+      "/assets/pool2-lYSfaBAx.jpeg",
+      "/assets/pool1-C41aCaFt.jpeg"
+    ]
+  },
+  {
+    "id": "additional-photos",
+    "title": "Additional photos",
+    "amenities": [],
+    "coverImage": "/assets/additional-1-DUHBHKZy.jpeg",
+    "images": [
+      "/assets/additional-1-DUHBHKZy.jpeg",
+      "/assets/additional-2-BAge9HE_.jpeg",
+      "/assets/additional-3-CJel4pAq.jpeg",
+      "/assets/additional-4-CsC5-GzA.jpeg",
+      "/assets/additional-5-XsGO5HbS.jpeg",
+      "/assets/additional-6-D5Cbzl-g.jpeg",
+      "/assets/additional-7-CazFSrqK.jpeg",
+      "/assets/additional-8-C1HZJC3l.jpeg",
+      "/assets/additional-9-D76DjQ2I.jpeg",
+      "/assets/additional-10-U6Fh-z-t.jpeg"
+    ]
+  }
+];
+export const reviewsData = {
+  "overallRating": 4.95,
+  "reviewCount": 19,
+  "guestFavouriteTagline": "This home is a guest favourite based on ratings, reviews and reliability",
+  "ratingDistribution": [
+    {
+      "stars": 5,
+      "percentage": 95
+    },
+    {
+      "stars": 4,
+      "percentage": 5
+    },
+    {
+      "stars": 3,
+      "percentage": 0
+    },
+    {
+      "stars": 2,
+      "percentage": 0
+    },
+    {
+      "stars": 1,
+      "percentage": 0
+    }
+  ],
+  "categories": [
+    {
+      "id": "cleanliness",
+      "name": "Cleanliness",
+      "score": "5.0",
+      "icon": "cleanliness"
+    },
+    {
+      "id": "accuracy",
+      "name": "Accuracy",
+      "score": "5.0",
+      "icon": "accuracy"
+    },
+    {
+      "id": "checkin",
+      "name": "Check-in",
+      "score": "5.0",
+      "icon": "checkin"
+    },
+    {
+      "id": "communication",
+      "name": "Communication",
+      "score": "5.0",
+      "icon": "communication"
+    },
+    {
+      "id": "location",
+      "name": "Location",
+      "score": "4.8",
+      "icon": "location"
+    },
+    {
+      "id": "value",
+      "name": "Value",
+      "score": "4.8",
+      "icon": "value"
+    }
+  ],
+  "keywordTags": [
+    {
+      "id": "comfort",
+      "label": "Comfort",
+      "count": 6,
+      "emoji": "🛋️"
+    },
+    {
+      "id": "accuracy",
+      "label": "Accuracy",
+      "count": 5,
+      "emoji": "✅"
+    },
+    {
+      "id": "hottub",
+      "label": "Hot tub",
+      "count": 5,
+      "emoji": "🪵"
+    },
+    {
+      "id": "condition",
+      "label": "Condition",
+      "count": 4,
+      "emoji": "📋"
+    },
+    {
+      "id": "hospitality",
+      "label": "Hospitality",
+      "count": 8,
+      "emoji": "🎁"
+    },
+    {
+      "id": "cleanliness",
+      "label": "Cleanliness",
+      "count": 4,
+      "emoji": "🧴"
+    },
+    {
+      "id": "amenities",
+      "label": "Amenities",
+      "count": 2,
+      "emoji": "🍰"
+    },
+    {
+      "id": "decor",
+      "label": "Decor",
+      "count": 3,
+      "emoji": "🖼️"
+    },
+    {
+      "id": "indoor_spaces",
+      "label": "Indoor spaces",
+      "count": 4,
+      "emoji": "🏠"
+    },
+    {
+      "id": "location",
+      "label": "Location",
+      "count": 7,
+      "emoji": "📍"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "author": "Amit",
+      "avatarType": "initials",
+      "avatarBg": "bg-[#F7E8D0] text-[#7A4B17]",
+      "avatarText": "A",
+      "avatar": null,
+      "tenure": "2 months on Airbnb",
+      "rating": 5,
+      "date": "1 week ago",
+      "tags": [
+        "hospitality",
+        "comfort"
+      ],
+      "content": "Very helpful and responsive team. Safe and peaceful stay. loved everything about the property."
+    },
+    {
+      "id": 2,
+      "author": "Aheesh",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+      "tenure": "3 years on Airbnb",
+      "rating": 5,
+      "date": "2 weeks ago",
+      "tags": [
+        "cleanliness",
+        "comfort",
+        "accuracy"
+      ],
+      "content": "We had a wonderful stay. The apartment was clean, comfortable, and exactly as shown in the photos. The host was very responsive and helpful throughout our stay. We would definitely recommend this place and would love to stay here again."
+    },
+    {
+      "id": 3,
+      "author": "Samiksha",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80",
+      "tenure": "8 months on Airbnb",
+      "rating": 5,
+      "date": "May 2026",
+      "tags": [
+        "hospitality"
+      ],
+      "content": "the host nitish was really great help"
+    },
+    {
+      "id": 4,
+      "author": "Vedant",
+      "avatarType": "initials",
+      "avatarBg": "bg-[#EFE8FA] text-[#5B3E8C]",
+      "avatarText": "V",
+      "avatar": null,
+      "tenure": "4 years on Airbnb",
+      "rating": 5,
+      "date": "May 2026",
+      "tags": [
+        "cleanliness",
+        "hospitality",
+        "hottub"
+      ],
+      "content": "We had an amazing stay at this property in Goa! The entire home was spotless and exceptionally well-maintained, making us feel comfortable from the moment we arrived. The cleanliness standards were truly impressive, with every corner of the house looking fresh and pristine. The host was extremely hospitable, communicative, and ensured our stay was completely hassle-free."
+    },
+    {
+      "id": 5,
+      "author": "Vaibhav S",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&auto=format&fit=crop&q=80",
+      "tenure": "3 years on Airbnb",
+      "rating": 5,
+      "date": "May 2026",
+      "tags": [
+        "comfort",
+        "hospitality"
+      ],
+      "content": "Great great experience living out there , can't expect more , will always look for it in the future and will recommend my friends too."
+    },
+    {
+      "id": 6,
+      "author": "Mohd",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+      "tenure": "5 years on Airbnb",
+      "rating": 5,
+      "date": "May 2026",
+      "tags": [
+        "accuracy"
+      ],
+      "content": "Great place. Exactly as described in the listing."
+    },
+    {
+      "id": 7,
+      "author": "Rohan Kapoor",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+      "tenure": "2 years on Airbnb",
+      "rating": 5,
+      "date": "April 2026",
+      "tags": [
+        "hottub",
+        "comfort"
+      ],
+      "content": "The private jacuzzi was unbelievable! Sparkling clean, relaxing, and surrounded by plants on the balcony. Worth every single penny."
+    },
+    {
+      "id": 8,
+      "author": "Ananya Deshmukh",
+      "avatarType": "initials",
+      "avatarBg": "bg-[#FCE8E6] text-[#C5221F]",
+      "avatarText": "A",
+      "avatar": null,
+      "tenure": "1 year on Airbnb",
+      "rating": 5,
+      "date": "April 2026",
+      "tags": [
+        "location",
+        "cleanliness"
+      ],
+      "content": "Super close to Candolim beach and all the best cafes. Walking distance to supermarkets as well. 10/10 recommendation!"
+    },
+    {
+      "id": 9,
+      "author": "Carlos Mendez",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100&auto=format&fit=crop&q=80",
+      "tenure": "6 years on Airbnb",
+      "rating": 5,
+      "date": "March 2026",
+      "tags": [
+        "hospitality",
+        "amenities"
+      ],
+      "content": "Exceptional hospitality from the team. High speed wifi was rock solid for my work Zoom calls. Will be staying here again when in Goa."
+    },
+    {
+      "id": 10,
+      "author": "Pooja Verma",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80",
+      "tenure": "3 years on Airbnb",
+      "rating": 5,
+      "date": "March 2026",
+      "tags": [
+        "condition",
+        "cleanliness"
+      ],
+      "content": "The place looks identical to the photographs, if not better in person. The kitchen had everything needed for quick breakfasts."
+    },
+    {
+      "id": 11,
+      "author": "Karan Johar",
+      "avatarType": "initials",
+      "avatarBg": "bg-[#E6F4EA] text-[#137333]",
+      "avatarText": "K",
+      "avatar": null,
+      "tenure": "4 years on Airbnb",
+      "rating": 5,
+      "date": "February 2026",
+      "tags": [
+        "comfort",
+        "hottub"
+      ],
+      "content": "Best romantic getaway spot in North Goa. Peaceful ambiance yet 5 mins away from all the Candolim action."
+    },
+    {
+      "id": 12,
+      "author": "Tanvi Saxena",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=80",
+      "tenure": "2 years on Airbnb",
+      "rating": 5,
+      "date": "February 2026",
+      "tags": [
+        "hospitality",
+        "accuracy"
+      ],
+      "content": "Host was always available on WhatsApp for any small queries. Smooth contactless check-in with the security guard."
+    },
+    {
+      "id": 13,
+      "author": "David Wilson",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop&q=80",
+      "tenure": "7 years on Airbnb",
+      "rating": 5,
+      "date": "January 2026",
+      "tags": [
+        "amenities",
+        "location"
+      ],
+      "content": "Outstanding stay. The air conditioning was super powerful and the swimming pool in the complex was very clean."
+    },
+    {
+      "id": 14,
+      "author": "Divya Nambiar",
+      "avatarType": "initials",
+      "avatarBg": "bg-[#FEF7E0] text-[#B06000]",
+      "avatarText": "D",
+      "avatar": null,
+      "tenure": "5 months on Airbnb",
+      "rating": 5,
+      "date": "January 2026",
+      "tags": [
+        "cleanliness",
+        "comfort"
+      ],
+      "content": "The bed is very comfortable with premium soft linens. Housekeeping provided fresh towels on request promptly."
+    },
+    {
+      "id": 15,
+      "author": "Aditya Roy",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&auto=format&fit=crop&q=80",
+      "tenure": "4 years on Airbnb",
+      "rating": 5,
+      "date": "December 2025",
+      "tags": [
+        "hospitality"
+      ],
+      "content": "Loved our Goa vacation thanks to Mirashya Homes. Great recommendations provided for nearby restaurants and sunset viewpoints."
+    },
+    {
+      "id": 16,
+      "author": "Jessica Taylor",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+      "tenure": "3 years on Airbnb",
+      "rating": 5,
+      "date": "December 2025",
+      "tags": [
+        "accuracy",
+        "hottub"
+      ],
+      "content": "Everything was top tier. Private jacuzzi under the stars was our favorite part. Will return definitely!"
+    },
+    {
+      "id": 17,
+      "author": "Manish Joshi",
+      "avatarType": "initials",
+      "avatarBg": "bg-[#E8F0FE] text-[#1A73E8]",
+      "avatarText": "M",
+      "avatar": null,
+      "tenure": "2 years on Airbnb",
+      "rating": 5,
+      "date": "November 2025",
+      "tags": [
+        "condition",
+        "location"
+      ],
+      "content": "Spotless place, gated community with 24/7 security so we felt totally safe coming back late at night."
+    },
+    {
+      "id": 18,
+      "author": "Shruti Hegde",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=100&auto=format&fit=crop&q=80",
+      "tenure": "1 year on Airbnb",
+      "rating": 5,
+      "date": "November 2025",
+      "tags": [
+        "comfort",
+        "cleanliness"
+      ],
+      "content": "Spacious living area, great smart TV with all streaming apps logged in, and very quiet air conditioning."
+    },
+    {
+      "id": 19,
+      "author": "Vikram Malhotra",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80",
+      "tenure": "5 years on Airbnb",
+      "rating": 5,
+      "date": "October 2025",
+      "tags": [
+        "hospitality",
+        "location"
+      ],
+      "content": "Perfect location in Candolim, wonderful hosts, seamless checkin. One of the best Airbnb experiences in Goa."
+    }
+  ]
+};
+export const amenitiesPreview = [
+  {
+    "name": "Kitchen",
+    "icon": "Kitchen"
+  },
+  {
+    "name": "Wifi",
+    "icon": "Wifi"
+  },
+  {
+    "name": "Dedicated workspace",
+    "icon": "Dedicated workspace"
+  },
+  {
+    "name": "Free parking on premises",
+    "icon": "Free parking on premises"
+  },
+  {
+    "name": "Pool",
+    "icon": "Pool"
+  },
+  {
+    "name": "Hot tub",
+    "icon": "Hot tub"
+  },
+  {
+    "name": "Pets allowed",
+    "icon": "Pets allowed"
+  },
+  {
+    "name": "Exterior security cameras on property",
+    "icon": "Exterior security cameras on property"
+  },
+  {
+    "name": "Carbon monoxide alarm",
+    "icon": "Carbon monoxide alarm",
+    "unavailable": true
+  },
+  {
+    "name": "Smoke alarm",
+    "icon": "Smoke alarm",
+    "unavailable": true
+  }
+];
+export const amenityCategories = [
+  {
+    "category": "Bathroom",
+    "items": [
+      {
+        "name": "Hairdryer",
+        "icon": "Hairdryer"
+      },
+      {
+        "name": "Cleaning products",
+        "icon": "Cleaning products"
+      },
+      {
+        "name": "Shampoo",
+        "icon": "Shampoo"
+      },
+      {
+        "name": "Hot water",
+        "icon": "Hot water"
+      },
+      {
+        "name": "Shower gel",
+        "icon": "Shower gel"
+      }
+    ]
+  },
+  {
+    "category": "Bedroom and laundry",
+    "items": [
+      {
+        "name": "Washing machine",
+        "icon": "Washing machine"
+      },
+      {
+        "name": "Hangers",
+        "icon": "Hangers"
+      },
+      {
+        "name": "Bed linen",
+        "icon": "Bed linen"
+      },
+      {
+        "name": "Room-darkening blinds",
+        "icon": "Room-darkening blinds"
+      },
+      {
+        "name": "Iron",
+        "icon": "Iron"
+      },
+      {
+        "name": "Clothes storage",
+        "icon": "Clothes storage"
+      },
+      {
+        "name": "Cot",
+        "icon": "Cot"
+      }
+    ]
+  },
+  {
+    "category": "Entertainment",
+    "items": [
+      {
+        "name": "TV",
+        "icon": "TV"
+      }
+    ]
+  },
+  {
+    "category": "Family",
+    "items": [
+      {
+        "name": "Cot",
+        "icon": "Cot"
+      }
+    ]
+  },
+  {
+    "category": "Heating and cooling",
+    "items": [
+      {
+        "name": "Air conditioning",
+        "icon": "Air conditioning"
+      },
+      {
+        "name": "Ceiling fan",
+        "icon": "Ceiling fan"
+      }
+    ]
+  },
+  {
+    "category": "Home safety",
+    "items": [
+      {
+        "name": "Exterior security cameras on property",
+        "icon": "Exterior security cameras on property"
+      },
+      {
+        "name": "Carbon monoxide alarm",
+        "icon": "Carbon monoxide alarm",
+        "unavailable": true
+      },
+      {
+        "name": "Smoke alarm",
+        "icon": "Smoke alarm",
+        "unavailable": true
+      }
+    ]
+  },
+  {
+    "category": "Internet and office",
+    "items": [
+      {
+        "name": "Wifi",
+        "icon": "Wifi"
+      },
+      {
+        "name": "Dedicated workspace",
+        "icon": "Dedicated workspace"
+      }
+    ]
+  },
+  {
+    "category": "Kitchen and dining",
+    "items": [
+      {
+        "name": "Kitchen",
+        "icon": "Kitchen"
+      },
+      {
+        "name": "Fridge",
+        "icon": "Fridge"
+      },
+      {
+        "name": "Freezer",
+        "icon": "Freezer"
+      },
+      {
+        "name": "Microwave",
+        "icon": "Microwave"
+      },
+      {
+        "name": "Cooking basics",
+        "icon": "Cooking basics"
+      },
+      {
+        "name": "Crockery and cutlery",
+        "icon": "Crockery and cutlery"
+      },
+      {
+        "name": "Kettle",
+        "icon": "Kettle"
+      },
+      {
+        "name": "Coffee",
+        "icon": "Coffee"
+      },
+      {
+        "name": "Wine glasses",
+        "icon": "Wine glasses"
+      },
+      {
+        "name": "Toaster",
+        "icon": "Toaster"
+      },
+      {
+        "name": "Blender",
+        "icon": "Blender"
+      },
+      {
+        "name": "Cooker",
+        "icon": "Cooker"
+      }
+    ]
+  },
+  {
+    "category": "Location features",
+    "items": [
+      {
+        "name": "Private entrance",
+        "icon": "Private entrance"
+      }
+    ]
+  },
+  {
+    "category": "Outdoor",
+    "items": [
+      {
+        "name": "Patio or balcony",
+        "icon": "Patio or balcony"
+      },
+      {
+        "name": "Outdoor dining area",
+        "icon": "Outdoor dining area"
+      }
+    ]
+  },
+  {
+    "category": "Parking and facilities",
+    "items": [
+      {
+        "name": "Free parking on premises",
+        "icon": "Free parking on premises"
+      },
+      {
+        "name": "Pool",
+        "icon": "Pool"
+      },
+      {
+        "name": "Hot tub",
+        "icon": "Hot tub"
+      },
+      {
+        "name": "Gym",
+        "icon": "Gym"
+      }
+    ]
+  },
+  {
+    "category": "Services",
+    "items": [
+      {
+        "name": "Pets allowed",
+        "icon": "Pets allowed"
+      },
+      {
+        "name": "Cleaning available during stay",
+        "icon": "Cleaning available during stay"
+      },
+      {
+        "name": "Long-term stays allowed",
+        "icon": "Long-term stays allowed"
+      },
+      {
+        "name": "Self check-in",
+        "icon": "Self check-in"
+      }
+    ]
+  }
+];
+export const hostDetailsData = {
+  "name": "Mirashya Homes",
+  "badge": "Host",
+  "avatarText": "MIRASHYA",
+  "avatarSubtext": "HOMES",
+  "avatarBg": "bg-[#183B32]",
+  "isVerified": true,
+  "stats": {
+    "reviews": "1,463",
+    "rating": "4.68",
+    "yearsHosting": "2"
+  },
+  "highlights": [
+    {
+      "id": "birth-decade",
+      "type": "balloon",
+      "text": "Born in the 80s"
+    },
+    {
+      "id": "education",
+      "type": "education",
+      "text": "Where I went to school: NICMAR GOA"
+    }
+  ],
+  "coHosts": [
+    {
+      "id": "cohost-1",
+      "name": "Sharath",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&auto=format&fit=crop&q=80"
+    },
+    {
+      "id": "cohost-2",
+      "name": "Aman Dev Pahwa",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
+    },
+    {
+      "id": "cohost-3",
+      "name": "Maria Karen Priyanka",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80"
+    },
+    {
+      "id": "cohost-4",
+      "name": "Simran",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80"
+    },
+    {
+      "id": "cohost-5",
+      "name": "Pallavi",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80"
+    },
+    {
+      "id": "cohost-6",
+      "name": "Sanyukta",
+      "avatarType": "image",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
+    },
+    {
+      "id": "cohost-7",
+      "name": "Shruti",
+      "avatarType": "initials",
+      "initial": "S",
+      "bgClass": "bg-[#FCE8F3] text-[#99154B]"
+    },
+    {
+      "id": "cohost-8",
+      "name": "Amisha",
+      "avatarType": "initials",
+      "initial": "A",
+      "bgClass": "bg-[#E1EFFE] text-[#1E429F]"
+    }
+  ],
+  "hostDetails": {
+    "responseRate": "100%",
+    "responseTime": "within an hour"
+  }
+};
+export const thingsToKnowData = {
+  "cancellationPolicy": {
+    "icon": "CalendarX",
+    "title": "Cancellation policy",
+    "description": "Free cancellation before 17 October. Cancel before check-in on 18 October for a partial refund.",
+    "subtext": "Review this host's full policy for details.",
+    "actionText": "Learn more"
+  },
+  "houseRules": {
+    "icon": "Key",
+    "title": "House rules",
+    "rules": [
+      "Check-in after 2:00 pm",
+      "Checkout before 11:00 am",
+      "3 guests maximum"
+    ],
+    "actionText": "Learn more"
+  },
+  "safetyAndProperty": {
+    "icon": "Shield",
+    "title": "Safety & property",
+    "items": [
+      "Carbon monoxide alarm not reported",
+      "Smoke alarm not reported",
+      "Exterior security cameras on property"
+    ],
+    "actionText": "Learn more"
+  }
+};
+export const nearbyStaysData = [
+  {
+    "id": "stay-1",
+    "image": "/assets/s1-BNZghcZ7.jpeg",
+    "title": "Beautiful Studio with a view to die for",
+    "price": "₹23,600",
+    "rating": "4.91"
+  },
+  {
+    "id": "stay-2",
+    "image": "/assets/s2-BDBpwHIy.jpeg",
+    "title": "NAQAB - 1bhk with private pool",
+    "price": "₹42,218",
+    "rating": "4.95"
+  },
+  {
+    "id": "stay-3",
+    "image": "/assets/s3-Dd5n_mRG.jpeg",
+    "title": "Greentique Luxury Flat with plunge pool, Calangute",
+    "price": "₹44,506",
+    "rating": "4.94"
+  },
+  {
+    "id": "stay-4",
+    "image": "/assets/s4-NDZ1Kx4a.jpeg",
+    "title": "The Tropical Studio | 5 mins to Beach",
+    "price": "₹22,824",
+    "rating": "4.96"
+  },
+  {
+    "id": "stay-5",
+    "image": "/assets/s6-_G0Sxcao.jpeg",
+    "title": "Luxury Casa Bella 1BHK with plunge pool, Calangute",
+    "price": "₹39,942",
+    "rating": "4.95"
+  },
+  {
+    "id": "stay-6",
+    "image": "/assets/s2-BDBpwHIy.jpeg",
+    "title": "Serene Coastal Flat with Balcony View",
+    "price": "₹28,500",
+    "rating": "4.92"
+  },
+  {
+    "id": "stay-7",
+    "image": "/assets/s3-Dd5n_mRG.jpeg",
+    "title": "Sunset Horizon Villa with Panoramic Views",
+    "price": "₹35,200",
+    "rating": "4.97"
+  },
+  {
+    "id": "stay-8",
+    "image": "/assets/s1-BNZghcZ7.jpeg",
+    "title": "Villa Azure - Luxury 2BHK with Private Pool",
+    "price": "₹48,900",
+    "rating": "4.89"
+  }
+];

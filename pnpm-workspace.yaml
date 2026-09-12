@@ -1,5 +1,5 @@
-pmOnFail: ignore
+packages:
+  - 'frontend'
+  - 'backend'
 
-minimumReleaseAgeExclude:
-  - '@next/*'
-  - next
+pmOnFail: ignore
