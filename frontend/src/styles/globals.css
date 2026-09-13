@@ -476,3 +476,98 @@ header[role="banner"] > div { max-width: 1440px !important; height: 80px !import
   .search-pill { max-width: 248px; }
   .page { padding-left: 20px; padding-right: 20px; }
 }
+
+/* Desktop reference composition */
+@media (min-width: 1101px) {
+  .page {
+    max-width: 1368px;
+    padding-top: 28px;
+    padding-bottom: 96px;
+  }
+
+  .content-section {
+    padding: 64px 0;
+    border-top: 1px solid #dddddd;
+  }
+
+  .content-section h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .content-section p,
+  .content-section small,
+  .content-section h3,
+  .content-section a {
+    font-size: 20px;
+    line-height: 1.55;
+  }
+
+  #location {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  #location > p:first-of-type {
+    margin-bottom: 30px;
+  }
+
+  #location .map {
+    height: 550px;
+    margin: 0 0 22px;
+    border-radius: 18px;
+    border-color: #dddddd;
+    background:
+      linear-gradient(112deg, #a7cce8 0 39%, transparent 39%),
+      repeating-linear-gradient(0deg, transparent 0 39px, rgba(191, 205, 187, .24) 40px),
+      repeating-linear-gradient(90deg, transparent 0 39px, rgba(191, 205, 187, .24) 40px),
+      #e7f0e3;
+    overflow: hidden;
+  }
+
+  #location .map::before,
+  #location .map::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(195, 225, 191, .72);
+  }
+
+  #location .map::before { width: 120px; height: 120px; left: 30%; top: 35%; }
+  #location .map::after { width: 160px; height: 160px; left: 55%; top: 47%; }
+
+  #location .map-search,
+  #location .map-controls button {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.14);
+  }
+
+  #location .map-search { top: 24px; left: 24px; border: 0; border-radius: 50%; }
+  #location .map-controls { top: 24px; right: 24px; gap: 0; }
+  #location .map-controls button { border-radius: 0; border: 0; font-size: 25px; }
+  #location .map-controls button:first-child { border-radius: 16px 16px 0 0; border-bottom: 1px solid #eeeeee; }
+  #location .map-controls button:last-child { border-radius: 0 0 16px 16px; }
+  #location .map-pin { width: 60px; height: 60px; position: relative; z-index: 1; box-shadow: 0 4px 12px rgba(0,0,0,.22); }
+
+  .host-card-inner { display: grid; grid-template-columns: 450px 1fr; gap: 124px; margin-top: 36px; }
+  .host-card-inner > img { width: 450px; height: 300px; border-radius: 24px; object-fit: cover; }
+  .host-card-inner > div:nth-child(2) { display: none; }
+  .host-card-inner .host-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; align-self: start; }
+  .host-card-inner .host-stats b { font-size: 28px; padding: 0 28px; border-bottom: 1px solid #dddddd; }
+  .host-card-inner .host-stats b small { font-size: 14px; color: #222; }
+  .host-card .outline-btn { width: 177px; margin-left: 574px; margin-top: -98px; }
+  .safety { margin-left: 574px; margin-top: 72px; font-size: 16px; }
+
+  .things > div { gap: 72px; }
+  .things h3 { font-size: 20px; }
+  .things p, .things a { font-size: 20px; }
+
+  .nearby .section-title-row { margin-bottom: 32px; }
+  .nearby-grid { gap: 20px; }
+  .nearby-grid img { height: 255px; border-radius: 18px; margin-bottom: 12px; }
+  .nearby-grid b, .nearby-grid span, .nearby-grid p { font-size: 18px; line-height: 1.25; }
+  .nearby-grid span { color: #222; margin-top: 4px; }
+}
