@@ -113,7 +113,7 @@ const PHOTOS = [
         caption: 'Living room and dining area'
     },
     {
-        src: '/assets/kitchen1-D8YM_FVx.jpeg',
+        src: '/assets/living-room-2-2-kXn5mfy1.jpeg',
         alt: 'Full kitchen',
         room: 'Kitchen',
         caption: 'Fully equipped kitchen'

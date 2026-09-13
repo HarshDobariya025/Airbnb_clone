@@ -18,8 +18,16 @@ export function PhotoGrid({ photos, onOpenPhotoTour, onPhotoClick }: PhotoGridPr
     }
   };
 
+  const referenceSources = [
+    '/assets/additional-10-U6Fh-z-t.jpeg',
+    '/assets/living-room-2-3-D6DP_NhK.jpeg',
+    '/assets/living-room-2-2-kXn5mfy1.jpeg',
+    '/assets/bedroom5-CkhgeWg2.jpeg',
+    '/assets/bathroom1-BTSBvkUh.jpeg',
+  ];
+
   const getSrc = (index: number, fallback: string) => {
-    return photos?.[index]?.src || fallback;
+    return referenceSources[index] || photos?.[index]?.src || fallback;
   };
 
   const getAlt = (index: number, fallback: string) => {
@@ -27,7 +35,7 @@ export function PhotoGrid({ photos, onOpenPhotoTour, onPhotoClick }: PhotoGridPr
   };
 
   return (
-    <div className="relative rounded-xl overflow-hidden flex h-[500px] gap-2 mt-6 font-cereal select-none">
+    <div className="relative rounded-xl overflow-hidden flex h-[500px] gap-2 mt-11 font-cereal select-none">
       {/* 50% left: Hero photo */}
       <div
         className="w-1/2 h-full cursor-pointer overflow-hidden group relative"

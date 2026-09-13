@@ -55,7 +55,7 @@ export function ListingHeader({
   };
 
   return (
-    <div className="flex items-end justify-between mb-2 font-cereal">
+    <div className="flex items-end justify-between mb-7 font-cereal">
       <h1 className="text-[26px] font-medium text-[#222222]">{displayTitle}</h1>
       <div className="flex items-center gap-4 text-[#222222] font-medium text-[14px]">
         {/* Share button */}

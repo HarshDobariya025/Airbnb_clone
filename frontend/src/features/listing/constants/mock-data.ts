@@ -6,7 +6,7 @@ const img = (id: string, w = 1000): string =>
 const PHOTOS: Photo[] = [
   { src: '/assets/additional-10-U6Fh-z-t.jpeg', alt: 'Bright living room', room: 'Living room', caption: 'Bright living room with dining area' },
   { src: '/assets/living-room-2-3-D6DP_NhK.jpeg', alt: 'Living room and dining', room: 'Living room', caption: 'Living room and dining area' },
-  { src: '/assets/kitchen1-D8YM_FVx.jpeg', alt: 'Full kitchen', room: 'Kitchen', caption: 'Fully equipped kitchen' },
+  { src: '/assets/living-room-2-2-kXn5mfy1.jpeg', alt: 'Full kitchen', room: 'Kitchen', caption: 'Fully equipped kitchen' },
   { src: '/assets/bedroom5-CkhgeWg2.jpeg', alt: 'Bedroom', room: 'Bedroom', caption: 'Comfortable bedroom' },
   { src: '/assets/bathroom1-BTSBvkUh.jpeg', alt: 'Modern bathroom', room: 'Bathroom', caption: 'Modern bathroom' },
   { src: '/assets/living-room-1-2-EeCJMjww.jpeg', alt: 'Living room seating', room: 'Living room', caption: 'Living room seating' },

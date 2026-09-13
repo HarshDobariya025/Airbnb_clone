@@ -132,8 +132,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 .compact-cta button:hover { background: #e60023; }
 
 /* Page Container & Main Layout */
-.page { max-width: 1360px; margin: 0 auto; padding: 24px 40px 80px; }
-.title-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; gap: 24px; }
+.page { max-width: 936px; margin: 0 auto; padding: 28px 0 80px; }
+.title-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 28px; gap: 24px; }
 .title-row h1 { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
 .title-row p { font-size: 14px; color: #717171; }
 .title-actions { display: flex; gap: 16px; }
@@ -437,7 +437,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 /* Reference parity overrides */
 body { font-family: var(--font-cereal); color: #222; }
 header[role="banner"] > div { max-width: 1440px !important; height: 80px !important; padding-left: 80px !important; padding-right: 48px !important; }
-.page { max-width: 1080px; padding: 28px 0 80px; }
+  .page { max-width: 936px; padding: 28px 0 80px; }
 .title-row { margin-bottom: 28px; }
 .title-row h1 { font-size: 24px; line-height: 1.25; }
 .photo-grid { height: 500px; margin-top: 0; margin-bottom: 36px; gap: 8px; border-radius: 12px; }
