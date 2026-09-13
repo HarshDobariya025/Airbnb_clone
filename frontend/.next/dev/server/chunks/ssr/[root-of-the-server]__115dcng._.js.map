@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/dobar/OneDrive/Desktop/Airbnb/Airbnb_clone/frontend/src/app/page.tsx"],"sourcesContent":["import { redirect } from 'next/navigation'\n\n/**\n * Root page — redirects to the listing demo page.\n * In a full implementation this would be the search/home page.\n */\nexport default function RootPage() {\n  redirect('/listing')\n}\n"],"names":["RootPage"],"mappings":";;;;AAAA;AAAA;;AAMe,SAASA;IACtB,IAAA,6MAAQ,EAAC;AACX"}}]
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///vercel/share/v0-project/frontend/src/app/page.tsx"],"sourcesContent":["import { redirect } from 'next/navigation'\n\n/**\n * Root page — redirects to the listing demo page.\n * In a full implementation this would be the search/home page.\n */\nexport default function RootPage() {\n  redirect('/listing')\n}\n"],"names":["RootPage"],"mappings":";;;;AAAA;AAAA;;AAMe,SAASA;IACtB,IAAA,waAAQ,EAAC;AACX"}}]
 }
