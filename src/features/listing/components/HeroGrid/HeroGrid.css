@@ -7,7 +7,7 @@
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 210px 210px;
+  grid-template-rows: 260px 260px;
   gap: 6px;
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -49,7 +49,7 @@
 /* For 5-image grid, split right side into 2x2 */
 .hero-grid {
   grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 210px 210px;
+  grid-template-rows: 260px 260px;
 }
 
 .hero-grid__cell--0 {
