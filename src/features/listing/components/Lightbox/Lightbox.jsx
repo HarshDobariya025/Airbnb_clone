@@ -2,7 +2,7 @@ import { useEffect, useCallback } from 'react';
 import './Lightbox.css';
 import { GridIcon, CloseIcon, PrevLargeIcon, NextLargeIcon } from '../../../../components/Icons.jsx';
 
-export default function Lightbox({ images, currentIndex, onClose, onNavigate }) {
+export default function Lightbox({ images, currentIndex, onClose, onNavigate, onPhotoTour }) {
   const total = images.length;
 
   const goNext = useCallback(() => {
@@ -33,7 +33,7 @@ export default function Lightbox({ images, currentIndex, onClose, onNavigate }) 
     <div className="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
       {/* Header */}
       <header className="lb__header">
-        <button className="lb__header-btn" type="button" aria-label="Show all photos" id="lbGrid">
+        <button className="lb__header-btn" type="button" aria-label="Show all photos" id="lbGrid" onClick={onPhotoTour}>
           <span className="lb__header-icon"><GridIcon /></span>
         </button>
         <div className="lb__counter" id="lbCounter">
@@ -44,7 +44,7 @@ export default function Lightbox({ images, currentIndex, onClose, onNavigate }) 
           type="button"
           aria-label="Close"
           id="lbClose"
-          onClick={onClose}
+          onClick={onPhotoTour}
         >
           <span className="lb__header-icon"><CloseIcon /></span>
         </button>

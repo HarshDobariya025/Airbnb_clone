@@ -399,7 +399,9 @@
   gap: 2px;
 }
 .pd__cal-day {
+  width: 35px;
   height: 44px;
+  aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -408,17 +410,24 @@
   border-radius: 50%;
   cursor: pointer;
   transition: background var(--transition-fast);
+  margin: 0 auto;
 }
 .pd__cal-day:not(.pd__cal-day--empty):not(.pd__cal-day--unavail):hover {
   background: var(--bg-light);
 }
 .pd__cal-day--empty { cursor: default; }
 .pd__cal-day--start {
+  width: 44px;
+  height: 44px;
+  aspect-ratio: 1;
   background: var(--text-primary);
   color: white;
   border-radius: 50%;
 }
 .pd__cal-day--end {
+  width: 44px;
+  height: 44px;
+  aspect-ratio: 1;
   background: var(--text-primary);
   color: white;
   border-radius: 50%;

@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import listing from './data/listing.json';
 
 import Header from './components/Header/Header.jsx';
@@ -23,6 +24,7 @@ function flattenImages(photoTour) {
 }
 
 export default function App() {
+  const navigate = useNavigate();
   const [photoTourOpen, setPhotoTourOpen] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -106,6 +108,7 @@ export default function App() {
           currentIndex={lightboxIndex}
           onClose={() => setLightboxOpen(false)}
           onNavigate={setLightboxIndex}
+          onPhotoTour={() => navigate('/photo-tour')}
         />
       )}
 

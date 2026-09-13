@@ -40,7 +40,7 @@ export default function Location({ data }) {
 
         {/* Search icon — top left */}
         <button className="loc__search-btn" aria-label="Search area">
-          <svg viewBox="0 0 32 32" aria-hidden="true" style={{ display: 'block', height: '100%', width: '100%', fill: 'none', stroke: 'currentColor', strokeWidth: 2.5 }}>
+          <svg viewBox="0 0 32 32" aria-hidden="true" style={{ display: 'block', height: '100%', width: '100%', fill: 'none', stroke: 'currentColor', strokeWidth: 3 }}>
             <circle cx="14" cy="14" r="9"/><path d="M21 21l7 7"/>
           </svg>
         </button>
@@ -48,12 +48,12 @@ export default function Location({ data }) {
         {/* Zoom controls — top right */}
         <div className="loc__zoom">
           <button aria-label="Zoom in" className="loc__zoom-btn">
-            <svg viewBox="0 0 32 32" style={{ display: 'block', height: '100%', width: '100%', fill: 'none', stroke: 'currentColor', strokeWidth: 2.5 }}>
+            <svg viewBox="0 0 32 32" style={{ display: 'block', height: '100%', width: '100%', fill: 'none', stroke: 'currentColor', strokeWidth: 3 }}>
               <path d="M16 6v20M6 16h20"/>
             </svg>
           </button>
           <button aria-label="Zoom out" className="loc__zoom-btn">
-            <svg viewBox="0 0 32 32" style={{ display: 'block', height: '100%', width: '100%', fill: 'none', stroke: 'currentColor', strokeWidth: 2.5 }}>
+            <svg viewBox="0 0 32 32" style={{ display: 'block', height: '100%', width: '100%', fill: 'none', stroke: 'currentColor', strokeWidth: 3 }}>
               <path d="M6 16h20"/>
             </svg>
           </button>

@@ -60,8 +60,8 @@
   position: absolute;
   top: 12px;
   left: 12px;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   background: white;
   border-radius: 50%;
   border: 1px solid #d0d0d0;
@@ -74,7 +74,7 @@
   transition: box-shadow var(--transition-fast);
 }
 .loc__search-btn:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-.loc__search-btn svg { width: 13px; height: 13px; }
+.loc__search-btn svg { width: 16px; height: 16px; }
 
 /* Zoom controls — top RIGHT */
 .loc__zoom {
@@ -90,8 +90,8 @@
   z-index: 2;
 }
 .loc__zoom-btn {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   background: white;
   display: flex;
   align-items: center;
@@ -102,7 +102,7 @@
 }
 .loc__zoom-btn:last-child { border-bottom: none; }
 .loc__zoom-btn:hover { background: #f5f5f5; }
-.loc__zoom-btn svg { width: 13px; height: 13px; }
+.loc__zoom-btn svg { width: 14px; height: 14px; }
 
 /* ── Below map ── */
 /* "Exact location…" — blue text, not grey */

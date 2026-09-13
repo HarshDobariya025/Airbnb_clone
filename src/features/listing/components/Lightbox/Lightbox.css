@@ -1,6 +1,6 @@
 .lb {
   position: fixed; inset: 0; z-index: var(--z-lightbox);
-  background: rgba(0, 0, 0, 0.95);
+  background: #ffffff;
   display: flex; flex-direction: column;
   animation: lbFadeIn 0.15s ease;
 }
@@ -15,12 +15,12 @@
 .lb__header-btn {
   width: 40px; height: 40px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  color: white; transition: background var(--transition-fast);
+  color: var(--text-primary); transition: background var(--transition-fast);
 }
-.lb__header-btn:hover { background: rgba(255,255,255,0.1); }
+.lb__header-btn:hover { background: rgba(0,0,0,0.06); }
 .lb__header-icon { display: flex; width: 20px; height: 20px; }
 .lb__counter {
-  font-size: 14px; font-weight: 500; color: white;
+  font-size: 14px; font-weight: 500; color: var(--text-primary);
   position: absolute; left: 50%; transform: translateX(-50%);
 }
 
