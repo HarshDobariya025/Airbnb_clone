@@ -1,0 +1,35 @@
+SEQUENCE OF PROMPTS USED (AI-Assisted Development via Google Antigravity):
+
+Phase 1: Project Setup & Asset Acquisition
+1. "Set up a new Vite + React project with standard file structure (components/, data/, etc.)"
+2. "Analyze the reference site DOM and extract the complete data structure into a static listing.json file, mapping all property details, amenities, and reviews."
+3. "Create an imageProxy.js script to map all image requests directly to the Vercel CDN URLs to bypass rate-limiting issues for local downloads."
+4. "Extract all SVG paths from the reference site and consolidate them into a reusable Icons.jsx component."
+5. "Create index.css containing the global design system (variables, typography, resets) exactly matching the reference site."
+
+Phase 2: Core Components & Layout
+6. "Implement Header.jsx/css with the top navigation, search bar styling, and sticky positioning."
+7. "Implement StickyNav.jsx/css that appears on scroll and highlights active sections (Photos, Amenities, Reviews, Location) using IntersectionObserver."
+8. "Implement HeroGrid.jsx/css recreating the 5-image responsive masonry-style grid with hover states and border-radius."
+9. "Create the main App.jsx layout scaffolding using the two-column grid for the property details and booking widget."
+
+Phase 3: Details & Booking Sidebar
+10. "Implement PropertyDetails.jsx/css (Left Column) - Add title, guest favorite badge, host summary, highlights, description with 'Show more', sleep arrangements, amenities preview, and calendar."
+11. "Implement BookingWidget.jsx/css (Right Column) - Create the sticky pricing card, date/guest selection form, early bird discount badge, reserve button, and 'report listing' link."
+
+Phase 4: Wide Sections (Below the fold)
+12. "Implement Reviews.jsx/css - Recreate the rating breakdown bars, keyword scrollable chips, and 2-column review cards with 'Show more' toggles."
+13. "Implement Location.jsx/css - Add the interactive embedded OpenStreetMap with custom zoom controls and neighborhood highlights."
+14. "Implement HostProfile.jsx/css - Create the left-side stat card with shadow/laurel and right-side co-host details, response rates, and safety notice."
+15. "Implement ThingsToKnow.jsx/css - Create the 3-column layout covering cancellation policies, house rules, and safety."
+16. "Implement SimilarListings.jsx/css - Create the horizontal carousel of nearby stays with left/right pagination controls and smooth CSS transform animation."
+
+Phase 5: Modals & Overlays
+17. "Implement AmenitiesModal.jsx/css - Create the full-screen slide-up modal with focus trapping, ESC-key close, and grouped amenity lists."
+18. "Implement PhotoTour.jsx/css - Create the full-screen photo gallery overlay featuring a sticky left sidebar navigation and alternating 1-img/2-img grid rows."
+19. "Implement Lightbox.jsx/css - Create the dark single-image viewer overlay with fade animations, arrow key navigation, and counter."
+
+Phase 6: Final Polish
+20. "Update App.jsx to wire up all state for the Modals and Overlays (PhotoTour, Lightbox, Amenities)."
+21. "Update index.html with the correct title and SEO meta descriptions."
+22. "Generate a Mermaid architecture diagram representing the component hierarchy and data flow."

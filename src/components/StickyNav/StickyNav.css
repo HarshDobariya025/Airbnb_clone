@@ -1,0 +1,97 @@
+.sticky-nav {
+  position: sticky;
+  top: var(--header-height);
+  z-index: calc(var(--z-sticky) - 1);
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--line-soft);
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.sticky-nav--visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.sticky-nav__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.sticky-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.sticky-nav__link {
+  display: block;
+  padding: 20px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+  white-space: nowrap;
+}
+.sticky-nav__link:hover {
+  color: var(--text-primary);
+}
+.sticky-nav__link--active {
+  color: var(--text-primary);
+  border-bottom-color: var(--text-primary);
+}
+
+.sticky-nav__cta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.sticky-nav__price-info {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sticky-nav__price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.sticky-nav__period {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+.sticky-nav__rating {
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  justify-content: flex-end;
+}
+
+.sticky-nav__reserve-btn {
+  background: var(--color-primary);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+.sticky-nav__reserve-btn:hover {
+  background: var(--color-primary-dark);
+  transform: scale(1.02);
+}

@@ -1,0 +1,9 @@
+.ttk { padding: 48px 0; border-top: 1px solid var(--line-soft); }
+.ttk__title { font-size: 22px; font-weight: 600; color: var(--text-primary); margin-bottom: 32px; }
+.ttk__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.ttk__col { }
+.ttk__col-icon { width: 28px; height: 28px; color: var(--text-primary); margin-bottom: 12px; }
+.ttk__col-title { font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 12px; }
+.ttk__item { font-size: 14px; color: var(--text-secondary); margin-bottom: 6px; line-height: 1.5; }
+.ttk__learn { font-size: 14px; font-weight: 600; text-decoration: underline; color: var(--text-primary); margin-top: 12px; display: inline-block; transition: opacity var(--transition-fast); }
+.ttk__learn:hover { opacity: 0.7; }

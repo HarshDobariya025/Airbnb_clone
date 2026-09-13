@@ -1,0 +1,24 @@
+/* App-level layout */
+
+.page-content {
+  /* wrapper for all page sections */
+}
+
+/* Two-column listing layout */
+.listing-layout {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+  display: flex;
+  gap: 96px;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+/* Wide sections below the fold */
+.wide-sections {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+}

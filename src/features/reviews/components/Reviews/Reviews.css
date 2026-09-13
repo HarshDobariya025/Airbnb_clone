@@ -1,0 +1,118 @@
+.rv { padding: 48px 0; border-top: 1px solid var(--line-soft); }
+
+/* Header */
+.rv__header { text-align: center; margin-bottom: 40px; }
+.rv__laurel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.rv__laurel img { height: 64px; width: auto; }
+.rv__laurel-score { font-size: 40px; font-weight: 700; color: var(--text-primary); }
+.rv__fav-label { font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.rv__fav-desc { font-size: 14px; color: var(--text-secondary); max-width: 380px; margin: 0 auto 16px; }
+.rv__how-btn {
+  font-size: 14px; font-weight: 600; text-decoration: underline;
+  color: var(--text-primary); transition: opacity var(--transition-fast);
+}
+.rv__how-btn:hover { opacity: 0.7; }
+
+/* Breakdown */
+.rv__breakdown {
+  display: grid;
+  grid-template-columns: 1fr repeat(6, auto);
+  gap: 24px 32px;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--line-soft);
+  overflow-x: auto;
+}
+
+.rv__bars { min-width: 200px; }
+.rv__bars-label { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px; }
+.rv__bars-list { display: flex; flex-direction: column; gap: 6px; }
+.rv__bar-row { display: flex; align-items: center; gap: 8px; }
+.rv__bar-num { font-size: 12px; color: var(--text-secondary); width: 8px; text-align: right; }
+.rv__bar-track {
+  flex: 1; height: 4px; background: var(--line-soft); border-radius: var(--radius-full); overflow: hidden;
+}
+.rv__bar-fill {
+  height: 100%; background: var(--text-primary); border-radius: var(--radius-full);
+  transition: width 0.6s ease;
+}
+
+.rv__cat { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 80px; }
+.rv__cat-label { font-size: 14px; color: var(--text-primary); white-space: nowrap; }
+.rv__cat-score { font-size: 18px; font-weight: 600; color: var(--text-primary); }
+
+/* Chips */
+.rv__chips {
+  display: flex; gap: 12px; overflow-x: auto; margin-bottom: 40px;
+  padding-bottom: 4px; scrollbar-width: none;
+}
+.rv__chips::-webkit-scrollbar { display: none; }
+.rv__chip {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-full);
+  font-size: 14px; color: var(--text-primary); white-space: nowrap;
+  background: white; transition: box-shadow var(--transition-fast);
+}
+.rv__chip:hover { box-shadow: var(--shadow-md); }
+.rv__chip-img { width: 24px; height: 24px; object-fit: cover; border-radius: 50%; }
+.rv__chip-count { font-weight: 600; }
+
+/* Cards */
+.rv__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.rv__card { display: flex; flex-direction: column; gap: 12px; }
+.rv__card-head { display: flex; align-items: center; gap: 12px; }
+.rv__avatar {
+  width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+}
+.rv__avatar--img { object-fit: cover; }
+.rv__avatar--initial {
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; font-weight: 600;
+}
+.rv__card-name { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+.rv__card-meta { font-size: 13px; color: var(--text-secondary); }
+.rv__card-meta-row {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--text-secondary);
+}
+.rv__stars { display: flex; gap: 1px; color: var(--color-primary); }
+
+.rv__card-text {
+  font-size: 15px; line-height: 1.55; color: var(--text-primary);
+}
+.rv__card-text--clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.rv__show-more {
+  font-size: 15px; font-weight: 600; text-decoration: underline;
+  color: var(--text-primary); transition: opacity var(--transition-fast);
+}
+.rv__show-more:hover { opacity: 0.7; }
+
+.rv__show-all-btn {
+  padding: 12px 24px;
+  border: 1px solid var(--text-primary);
+  border-radius: var(--radius-sm);
+  font-size: 15px; font-weight: 600;
+  color: var(--text-primary); background: white;
+  transition: background var(--transition-fast);
+}
+.rv__show-all-btn:hover { background: var(--bg-light); }

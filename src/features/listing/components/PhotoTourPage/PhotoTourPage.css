@@ -1,0 +1,463 @@
+/* ═══════════════════════════════════════════════════════════════
+   Photo Tour Page — /photo-tour
+   Matches the Airbnb reference design exactly.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Page wrapper ─────────────────────────────────────────────── */
+.ptp {
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Top sticky bar ───────────────────────────────────────────── */
+.ptp__bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 56px;
+  background: #ffffff;
+  border-bottom: 1px solid #ebebeb;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 8px;
+}
+
+.ptp__bar-title {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0;
+  font-family: inherit;
+}
+
+.ptp__bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.ptp__bar-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #717171;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  padding: 0;
+}
+
+.ptp__bar-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.ptp__bar-btn:hover {
+  background: #f7f7f7;
+}
+
+.ptp__bar-btn--heart {
+  color: #717171;
+}
+
+/* ── Horizontal category thumbnail nav ────────────────────────── */
+.ptp__categories {
+  background: #ffffff;
+  border-bottom: 1px solid #ebebeb;
+  padding: 16px 80px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 28px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.ptp__categories::-webkit-scrollbar {
+  display: none;
+}
+
+.ptp__cat-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 130px;
+  flex-shrink: 0;
+  transition: opacity 0.15s ease;
+}
+
+.ptp__cat-btn:hover {
+  opacity: 0.85;
+}
+
+.ptp__cat-thumb-wrap {
+  width: 130px;
+  height: 90px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ebebeb;
+  flex-shrink: 0;
+}
+
+.ptp__cat-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.ptp__cat-btn:hover .ptp__cat-thumb {
+  transform: scale(1.05);
+}
+
+.ptp__cat-label {
+  font-size: 12px;
+  font-weight: 400;
+  color: #222222;
+  text-align: center;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+/* ── Sections container ────────────────────────────────────────────── */
+.ptp__sections {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* ── Single room section ──────────────────────────────────────── */
+.ptp__section {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 480px);
+  gap: 0 88px;
+  padding: 56px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.ptp__section:last-child {
+  border-bottom: none;
+}
+
+/* Left sticky info panel */
+.ptp__section-info {
+  padding-right: 36px;
+  position: sticky;
+  top: 66px;
+  align-self: start;
+  height: fit-content;
+}
+
+.ptp__section-name {
+  font-size: 26px;
+  font-weight: 700;
+  color: #222222;
+  margin: 0 0 8px 0;
+  line-height: 1.25;
+}
+
+.ptp__section-sub {
+  font-size: 14px;
+  color: #717171;
+  line-height: 1.55;
+  margin: 0;
+  word-break: break-word;
+}
+
+/* Right photo grid */
+.ptp__section-photos {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ptp__img-row {
+  display: flex;
+  gap: 6px;
+}
+
+.ptp__img-row--single {
+  /* full-width single image */
+}
+
+.ptp__img-row--double {
+  /* two equal images */
+}
+
+.ptp__img-btn {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #ebebeb;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  display: block;
+  min-width: 0;
+  transition: opacity 0.15s ease;
+}
+
+.ptp__img-btn:hover {
+  opacity: 0.95;
+}
+
+.ptp__img-btn img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+/* Single-row images */
+.ptp__img-row--single .ptp__img-btn img {
+  height: 240px;
+}
+
+/* Double-row images */
+.ptp__img-row--double .ptp__img-btn img {
+  height: 145px;
+}
+
+.ptp__img-btn:hover img {
+  transform: scale(1.025);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Lightbox (photo viewer overlay)
+   ════════════════════════════════════════════════════════════════ */
+.ptp-lb {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  animation: ptpLbFade 0.2s ease;
+}
+
+@keyframes ptpLbFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.ptp-lb__header {
+  height: 56px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 12px;
+  background: #ffffff;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.ptp-lb__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+  flex: 1;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ptp-lb__counter {
+  font-size: 14px;
+  color: #717171;
+  margin-left: auto;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ptp-lb__header-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222222;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.ptp-lb__header-btn:hover {
+  background: #ebebeb;
+}
+
+.ptp-lb__close {
+  margin-left: 0;
+}
+
+/* Stage (image area) */
+.ptp-lb__stage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 100px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.ptp-lb__img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  animation: ptpLbImgFade 0.2s ease;
+}
+
+@keyframes ptpLbImgFade {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Nav arrows */
+.ptp-lb__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ebebeb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  padding: 0;
+}
+
+.ptp-lb__nav:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.ptp-lb__nav:not(:disabled):hover {
+  transform: translateY(-50%) scale(1.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.ptp-lb__nav--prev { left: 24px; }
+.ptp-lb__nav--next { right: 24px; }
+
+/* ── Responsive ────────────────────────────────────────────────── */
+@media (max-width: 1280px) {
+  .ptp__section {
+    padding: 48px 100px 48px 120px;
+  }
+
+  .ptp__categories {
+    padding: 16px 60px 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .ptp__section {
+    padding: 44px 60px 44px 100px;
+  }
+
+  .ptp__categories {
+    padding: 16px 40px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ptp__section {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+    gap: 16px;
+  }
+
+  .ptp__section-info {
+    position: static;
+    padding-right: 0;
+  }
+
+  .ptp__categories {
+    padding: 12px 24px 16px;
+  }
+
+  .ptp__cat-thumb-wrap {
+    width: 100px;
+    height: 70px;
+  }
+
+  .ptp__cat-btn {
+    width: 100px;
+  }
+
+  .ptp__img-row--single .ptp__img-btn img {
+    height: 180px;
+  }
+
+  .ptp__img-row--double .ptp__img-btn img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ptp__bar {
+    padding: 0 16px;
+  }
+
+  .ptp__section {
+    padding: 24px 16px;
+  }
+
+  .ptp__categories {
+    padding: 10px 16px 14px;
+    gap: 14px 18px;
+  }
+
+  .ptp__cat-thumb-wrap {
+    width: 80px;
+    height: 56px;
+  }
+
+  .ptp__cat-btn {
+    width: 80px;
+  }
+
+  .ptp__img-row--single .ptp__img-btn img {
+    height: 150px;
+  }
+
+  .ptp__img-row--double .ptp__img-btn img {
+    height: 100px;
+  }
+
+  .ptp-lb__stage {
+    padding: 16px 60px;
+  }
+
+  .ptp-lb__nav--prev { left: 8px; }
+  .ptp-lb__nav--next { right: 8px; }
+}

@@ -1,0 +1,51 @@
+graph TD
+    %% Main Application Layer
+    subgraph App[React SPA Application]
+        A[App.jsx\nRoot Component]
+        A --> Header[Header Component]
+        A --> Nav[StickyNav Component]
+        A --> Hero[HeroGrid Component]
+        A --> Details[PropertyDetails Component]
+        A --> Booking[BookingWidget Component]
+        A --> Reviews[Reviews Component]
+        A --> Location[Location Component]
+        A --> Host[HostProfile Component]
+        A --> TTK[ThingsToKnow Component]
+        A --> Similar[SimilarListings Component]
+        
+        %% Modals and Overlays
+        A -.-> PhotoTour[PhotoTour Overlay]
+        A -.-> Lightbox[Lightbox Modal]
+        A -.-> Amenities[Amenities Modal]
+    end
+
+    %% Data Layer
+    subgraph Data[Data Layer]
+        JSON[listing.json\nStatic Data Store]
+        Proxy[imageProxy.js\nImage Resolution]
+    end
+
+    %% State Management
+    subgraph State[Local State Management]
+        A_State[App State:\nModal Visibility]
+        B_State[Booking State:\nSelected Dates/Guests]
+        L_State[Lightbox State:\nCurrent Image Index]
+    end
+
+    %% Connections
+    JSON -->|Injects Data| A
+    JSON -->|Injects Data| Details
+    JSON -->|Injects Data| Reviews
+    JSON -->|Injects Data| Host
+    JSON -->|Injects Data| Booking
+    Proxy -->|Resolves URLs| Hero
+    Proxy -->|Resolves URLs| PhotoTour
+    
+    %% Styling
+    subgraph Styles[CSS Architecture]
+        Global[index.css\nDesign Tokens & Reset]
+        CompCSS[Component CSS Modules]
+    end
+    
+    Global -.->|Applies Variables| CompCSS
+    CompCSS -.->|Styles| App

@@ -1,0 +1,108 @@
+.hero-section {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 210px 210px;
+  gap: 6px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Left large cell */
+.hero-grid__cell {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-light);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.hero-grid__cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-grid__cell:hover img {
+  transform: scale(1.04);
+}
+
+/* Cell 0 — spans full left column */
+.hero-grid__cell--0 {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+/* Cells 1-4 on the right */
+.hero-grid__cell--1 { grid-column: 2; grid-row: 1; }
+.hero-grid__cell--2 { grid-column: 2; grid-row: 2; /* Will be split further below */ }
+
+/* For 5-image grid, split right side into 2x2 */
+.hero-grid {
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 210px 210px;
+}
+
+.hero-grid__cell--0 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+.hero-grid__cell--1 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.hero-grid__cell--2 {
+  grid-column: 3;
+  grid-row: 1;
+}
+.hero-grid__cell--3 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.hero-grid__cell--4 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+/* Corner rounding */
+.hero-grid__cell--0 { border-radius: var(--radius-md) 0 0 var(--radius-md); }
+.hero-grid__cell--2 { border-radius: 0 var(--radius-md) 0 0; }
+.hero-grid__cell--4 { border-radius: 0 0 var(--radius-md) 0; }
+
+/* Show all photos button */
+.hero-grid__show-all {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: white;
+  border: 1px solid var(--text-primary);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+  z-index: 5;
+}
+.hero-grid__show-all:hover {
+  background: var(--bg-light);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.hero-grid__show-all-icon {
+  display: flex;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+}

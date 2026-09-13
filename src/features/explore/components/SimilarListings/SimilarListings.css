@@ -1,0 +1,43 @@
+.sim { padding: 48px 0; border-top: 1px solid var(--line-soft); }
+.sim__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.sim__title { font-size: 22px; font-weight: 600; color: var(--text-primary); }
+.sim__controls { display: flex; align-items: center; gap: 12px; }
+.sim__page-info { font-size: 14px; color: var(--text-secondary); }
+.sim__nav-btn {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid var(--line-soft); background: white;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-primary);
+  transition: box-shadow var(--transition-fast), background var(--transition-fast);
+}
+.sim__nav-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.sim__nav-btn:not(:disabled):hover { box-shadow: var(--shadow-md); }
+.sim__nav-icon { display: flex; width: 12px; height: 12px; }
+
+.sim__track-wrap { overflow: hidden; }
+.sim__track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.sim__card {
+  flex: 0 0 calc((100% - 32px) / 3);
+  min-width: 0;
+  cursor: pointer;
+}
+.sim__card-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+.sim__card:hover .sim__card-img { transform: scale(1.02); }
+.sim__card-title { font-size: 15px; font-weight: 500; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4; }
+.sim__card-price {
+  font-size: 14px; color: var(--text-secondary);
+  display: flex; align-items: center; gap: 4px;
+}
+.sim__card-star { display: inline-flex; color: var(--color-primary); }

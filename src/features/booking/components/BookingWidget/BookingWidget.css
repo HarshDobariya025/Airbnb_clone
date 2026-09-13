@@ -1,0 +1,183 @@
+.bw {
+  width: 370px;
+  flex-shrink: 0;
+  position: sticky;
+  top: calc(var(--header-height) + 80px);
+  align-self: flex-start;
+}
+
+/* Discount Banner */
+.bw__discount {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+  background: white;
+}
+.bw__discount-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.bw__discount-text {
+  flex: 1;
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+.bw__discount-text a {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.bw__discount-claim {
+  padding: 8px 16px;
+  border: 1px solid var(--text-primary);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: white;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background var(--transition-fast);
+}
+.bw__discount-claim:hover { background: var(--bg-light); }
+
+/* Booking Card */
+.bw__card {
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 24px;
+  background: white;
+}
+
+.bw__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.bw__price {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.bw__period {
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+/* Form area */
+.bw__form {
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.bw__date-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--line-soft);
+}
+.bw__date-cell {
+  padding: 12px 12px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+.bw__date-cell:hover { background: var(--bg-light); }
+.bw__date-cell--right {
+  border-left: 1px solid var(--line-soft);
+}
+
+.bw__guest-row {
+  padding: 12px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+.bw__guest-row:hover { background: var(--bg-light); }
+
+.bw__field-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.bw__field-value {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+.bw__chevron {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  color: var(--text-primary);
+}
+
+/* Cancellation */
+.bw__cancellation {
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* Reserve Button */
+.bw__reserve-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, #E61E4D, #E31C5F, #D70466);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: filter var(--transition-fast), transform var(--transition-fast);
+  margin-bottom: 16px;
+}
+.bw__reserve-btn:hover {
+  filter: brightness(0.95);
+  transform: scale(1.01);
+}
+
+.bw__no-charge {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Report */
+.bw__report {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 0 4px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.bw__report-icon {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.bw__report a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+}
+.bw__report a:hover { color: var(--text-primary); }
