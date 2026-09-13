@@ -4413,6 +4413,96 @@ header[role="banner"] > div {
   }
 }
 
+@media (min-width: 900px) {
+  body {
+    font-family: Airbnb Cereal, Arial, sans-serif;
+  }
+
+  header[role="banner"] {
+    height: 104px;
+  }
+
+  header[role="banner"] > div {
+    max-width: 1760px;
+    height: 100%;
+    padding-left: 100px;
+    padding-right: 80px;
+  }
+
+  header[role="banner"] > div > div:nth-child(2) {
+    width: 520px;
+    max-width: 520px;
+    margin-left: 0;
+  }
+
+  .page {
+    max-width: 1368px;
+    padding-top: 34px;
+    padding-bottom: 80px;
+  }
+
+  .title-row {
+    margin-bottom: 32px;
+  }
+
+  .title-row h1 {
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .photo-grid {
+    gap: 10px;
+    height: 625px;
+    margin-top: 0;
+    margin-bottom: 48px;
+  }
+
+  .photo-grid > div, .photo-grid .small-photos {
+    gap: 10px;
+  }
+
+  .photo-button {
+    border-radius: 0;
+  }
+
+  .photo-grid > div:first-child {
+    border-radius: 16px 0 0 16px;
+  }
+
+  .photo-grid .small-photos > div:nth-child(2) {
+    border-radius: 0 16px 0 0;
+  }
+
+  .photo-grid .small-photos > div:nth-child(4) {
+    border-radius: 0 0 16px;
+  }
+
+  .show-all {
+    opacity: 1;
+    color: #222;
+    background: #fff;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 11px 16px;
+    font-size: 16px;
+    inset: auto 30px 30px auto;
+  }
+
+  .show-all:hover {
+    background: #f7f7f7;
+  }
+
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 464px;
+    gap: 72px;
+  }
+
+  .listing-content {
+    gap: 32px;
+  }
+}
+
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
