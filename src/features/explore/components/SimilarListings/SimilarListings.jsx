@@ -2,26 +2,30 @@ import { useState } from 'react';
 import './SimilarListings.css';
 import { StarIcon, ChevronLeftIcon, ChevronRightIcon } from '../../../../components/Icons.jsx';
 
-const VISIBLE = 3;
+const VISIBLE = 5;
+const GAP = 16; // px gap between cards
 
 export default function SimilarListings({ listings }) {
-  const [offset, setOffset] = useState(0);
-  const maxOffset = listings.length - VISIBLE;
-  const pageInfo = `${offset + 1} / ${Math.ceil(listings.length / VISIBLE)}`;
+  const [page, setPage] = useState(0);
+  const maxOffset = Math.max(0, listings.length - VISIBLE);
+  const totalPages = Math.ceil(listings.length / VISIBLE);
 
-  const prev = () => setOffset(o => Math.max(0, o - 1));
-  const next = () => setOffset(o => Math.min(maxOffset, o + 1));
+  // Cap offset so the last page always fills VISIBLE cards (no blank space)
+  const offset = Math.min(page * VISIBLE, maxOffset);
+
+  const prev = () => setPage(p => Math.max(0, p - 1));
+  const next = () => setPage(p => Math.min(totalPages - 1, p + 1));
 
   return (
     <section className="sim">
       <div className="sim__header">
         <h2 className="sim__title">More stays nearby</h2>
         <div className="sim__controls">
-          <span className="sim__page-info">{pageInfo}</span>
+          <span className="sim__page-info">{page + 1}/{totalPages}</span>
           <button
             className="sim__nav-btn"
             onClick={prev}
-            disabled={offset === 0}
+            disabled={page === 0}
             id="simPrev"
             aria-label="Previous"
           >
@@ -30,7 +34,7 @@ export default function SimilarListings({ listings }) {
           <button
             className="sim__nav-btn"
             onClick={next}
-            disabled={offset >= maxOffset}
+            disabled={page >= totalPages - 1}
             id="simNext"
             aria-label="Next"
           >
@@ -43,7 +47,10 @@ export default function SimilarListings({ listings }) {
         <div
           className="sim__track"
           id="simTrack"
-          style={{ transform: `translateX(calc(-${offset} * (100% / ${VISIBLE} + 8px)))` }}
+          style={{
+            // Each card step = (containerWidth + GAP) / VISIBLE
+            transform: `translateX(calc(-${offset} * ((100% + ${GAP}px) / ${VISIBLE})))`
+          }}
         >
           {listings.map((item, i) => (
             <div className="sim__card" key={i}>

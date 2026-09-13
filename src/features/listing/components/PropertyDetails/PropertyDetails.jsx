@@ -54,7 +54,10 @@ const AmenityIcons = {
 };
 
 /* ---- Calendar (static, from reference data) ---- */
-function Calendar({ checkIn, checkOut }) {
+// Unavailable dates in November (already booked/past)
+const NOV_UNAVAILABLE = new Set([18, 19, 20, 21, 22, 23, 24, 29, 30]);
+
+function Calendar() {
   const oct2026 = [
     [null, null, null, null, 1, 2, 3],
     [4, 5, 6, 7, 8, 9, 10],
@@ -71,7 +74,7 @@ function Calendar({ checkIn, checkOut }) {
   ];
   const days = ['S','M','T','W','T','F','S'];
 
-  const renderMonth = (name, weeks, startDay, endDay, rangeStart, rangeEnd) => (
+  const renderMonth = (name, weeks, rangeStart, rangeEnd, unavailable) => (
     <div className="pd__cal-month">
       <div className="pd__cal-month-name">{name}</div>
       <div className="pd__cal-days-head">{days.map((d, i) => <span key={i}>{d}</span>)}</div>
@@ -80,6 +83,7 @@ function Calendar({ checkIn, checkOut }) {
           const isStart = day === rangeStart;
           const isEnd = day === rangeEnd;
           const inRange = day > rangeStart && day < rangeEnd;
+          const isUnavail = unavailable && day && unavailable.has(day);
           return (
             <div
               key={i}
@@ -89,6 +93,7 @@ function Calendar({ checkIn, checkOut }) {
                 isStart ? 'pd__cal-day--start' : '',
                 isEnd ? 'pd__cal-day--end' : '',
                 inRange ? 'pd__cal-day--range' : '',
+                isUnavail ? 'pd__cal-day--unavail' : '',
               ].join(' ')}
             >
               {day || ''}
@@ -101,8 +106,8 @@ function Calendar({ checkIn, checkOut }) {
 
   return (
     <div className="pd__cal-wrap">
-      {renderMonth('October 2026', oct2026, null, null, 18, 23)}
-      {renderMonth('November 2026', nov2026, null, null, 0, 0)}
+      {renderMonth('October 2026', oct2026, 18, 23, null)}
+      {renderMonth('November 2026', nov2026, 0, 0, NOV_UNAVAILABLE)}
     </div>
   );
 }
@@ -239,33 +244,34 @@ export default function PropertyDetails({ data, onShowAmenities, onImageClick })
       {/* Calendar */}
       <div className="pd__section">
         <div className="pd__cal-header">
-          <div className="pd__cal-title">{data.nights} nights in Candolim</div>
-          <div className="pd__cal-dates">{data.checkIn.replace(/\//g, ' ')} — wait, let me re-format this</div>
-        </div>
-        <div className="pd__cal-header">
           <div>
             <div className="pd__cal-title">{data.nights} nights in Candolim</div>
             <div className="pd__cal-subtitle">18 Oct 2026 - 23 Oct 2026</div>
           </div>
-          <div className="pd__cal-nav">
-            <button aria-label="Previous month" className="pd__cal-nav-btn">
-              <span className="pd__cal-nav-icon">
-                <svg viewBox="0 0 18 18" aria-hidden="true" style={{ display: 'block', height: '100%', width: '100%', fill: 'currentColor' }}>
-                  <path d="m13.7 16.29a1 1 0 1 1 -1.42 1.41l-8-8a1 1 0 0 1 0-1.41l8-8a1 1 0 1 1 1.42 1.41l-7.29 7.29z" fillRule="evenodd"/>
-                </svg>
-              </span>
-            </button>
-            <button aria-label="Next month" className="pd__cal-nav-btn">
-              <span className="pd__cal-nav-icon">
-                <svg viewBox="0 0 18 18" aria-hidden="true" style={{ display: 'block', height: '100%', width: '100%', fill: 'currentColor' }}>
-                  <path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fillRule="evenodd"/>
-                </svg>
-              </span>
-            </button>
-          </div>
         </div>
-        <Calendar />
+        <div className="pd__cal-months-nav">
+          <button aria-label="Previous month" className="pd__cal-nav-btn">
+            <span className="pd__cal-nav-icon">
+              <svg viewBox="0 0 18 18" aria-hidden="true" style={{ display: 'block', height: '100%', width: '100%', fill: 'currentColor' }}>
+                <path d="m13.7 16.29a1 1 0 1 1 -1.42 1.41l-8-8a1 1 0 0 1 0-1.41l8-8a1 1 0 1 1 1.42 1.41l-7.29 7.29z" fillRule="evenodd"/>
+              </svg>
+            </span>
+          </button>
+          <Calendar />
+          <button aria-label="Next month" className="pd__cal-nav-btn">
+            <span className="pd__cal-nav-icon">
+              <svg viewBox="0 0 18 18" aria-hidden="true" style={{ display: 'block', height: '100%', width: '100%', fill: 'currentColor' }}>
+                <path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fillRule="evenodd"/>
+              </svg>
+            </span>
+          </button>
+        </div>
         <div className="pd__cal-clear-row">
+          <span className="pd__cal-keyboard-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" style={{ display:'block', width:24, height:24, fill:'currentColor' }}>
+              <path d="M28 6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h24zm0 2H4v14h24V8zM9 18v2H7v-2h2zm16 0v2H11v-2h14zm0-4v2H17v-2h8zm-10 0v2H7v-2h10zm10-4v2H7v-2h18z"/>
+            </svg>
+          </span>
           <button className="pd__cal-clear-btn">Clear dates</button>
         </div>
       </div>

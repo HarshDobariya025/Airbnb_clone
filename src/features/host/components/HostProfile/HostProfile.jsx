@@ -20,46 +20,52 @@ export default function HostProfile({ data }) {
       <h2 className="hp__section-title">Meet your host</h2>
 
       <div className="hp__layout">
-        <div className="hp__main-card">
-          {/* Host info */}
-          <div className="hp__host-info">
-            <div className="hp__avatar-wrap">
-              <img className="hp__avatar" src={host.avatar} alt={host.name} />
-              <span className="hp__verified-badge"><VerifiedIcon /></span>
+
+        {/* ── LEFT COLUMN: card + details below ── */}
+        <div className="hp__left-col">
+          <div className="hp__main-card">
+            {/* Avatar + name — left side of card */}
+            <div className="hp__host-info">
+              <div className="hp__avatar-wrap">
+                <img className="hp__avatar" src={host.avatar} alt={host.name} />
+                <span className="hp__verified-badge"><VerifiedIcon /></span>
+              </div>
+              <div className="hp__name">{host.name}</div>
+              <div className="hp__role">Host</div>
             </div>
-            <div className="hp__name">{host.name}</div>
-            <div className="hp__role">Host</div>
+
+            {/* Stats — right side of card, stacked with dividers */}
+            <div className="hp__stats">
+              <div className="hp__stat">
+                <div className="hp__stat-val">{host.reviews.toLocaleString()}</div>
+                <div className="hp__stat-label">Reviews</div>
+              </div>
+              <div className="hp__stat">
+                <div className="hp__stat-val">{host.rating}★</div>
+                <div className="hp__stat-label">Rating</div>
+              </div>
+              <div className="hp__stat hp__stat--last">
+                <div className="hp__stat-val">{host.years}</div>
+                <div className="hp__stat-label">Years hosting</div>
+              </div>
+            </div>
           </div>
-          {/* Stats */}
-          <div className="hp__stats">
-            <div className="hp__stat">
-              <div className="hp__stat-val">{host.reviews.toLocaleString()}</div>
-              <div className="hp__stat-label">Reviews</div>
+
+          {/* Born / School — below the card */}
+          <div className="hp__details">
+            <div className="hp__detail">
+              <span className="hp__detail-icon"><PinIcon /></span>
+              <span>{host.bornIn}</span>
             </div>
-            <div className="hp__stat">
-              <div className="hp__stat-val">{host.rating}★</div>
-              <div className="hp__stat-label">Rating</div>
-            </div>
-            <div className="hp__stat">
-              <div className="hp__stat-val">{host.years}</div>
-              <div className="hp__stat-label">Years hosting</div>
+            <div className="hp__detail">
+              <span className="hp__detail-icon"><SchoolIcon /></span>
+              <span>{host.school}</span>
             </div>
           </div>
         </div>
 
+        {/* ── RIGHT COLUMN ── */}
         <div className="hp__right">
-          {/* Host details */}
-          <div className="hp__details">
-            <div className="hp__detail">
-              <span className="hp__detail-icon"><PinIcon /></span>
-              {host.bornIn}
-            </div>
-            <div className="hp__detail">
-              <span className="hp__detail-icon"><SchoolIcon /></span>
-              {host.school}
-            </div>
-          </div>
-
           {/* Co-hosts */}
           <div className="hp__cohost-title">Co-Hosts</div>
           <div className="hp__cohosts">
@@ -87,6 +93,7 @@ export default function HostProfile({ data }) {
             <span>To help protect your payment, always use Airbnb to send money and communicate with hosts.</span>
           </div>
         </div>
+
       </div>
     </section>
   );

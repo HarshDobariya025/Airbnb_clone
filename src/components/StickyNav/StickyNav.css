@@ -1,7 +1,7 @@
 .sticky-nav {
   position: sticky;
-  top: var(--header-height);
-  z-index: calc(var(--z-sticky) - 1);
+  top: 0;
+  z-index: var(--z-sticky);
   background: var(--bg-white);
   border-bottom: 1px solid var(--line-soft);
   transform: translateY(-100%);

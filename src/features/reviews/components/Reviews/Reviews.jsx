@@ -2,6 +2,51 @@ import { useState } from 'react';
 import './Reviews.css';
 import { StarIcon } from '../../../../components/Icons.jsx';
 
+/* ── Per-category icons ── */
+const CatIcon = ({ icon }) => {
+  const s = { display: 'block', width: 24, height: 24, fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, overflow: 'visible' };
+  const icons = {
+    clean: ( // spray bottle
+      <svg viewBox="0 0 32 32" style={s}>
+        <path d="M10 6h8v4H10zM6 10h12l2 16H4L6 10z" strokeLinejoin="round"/>
+        <path d="M18 8h4l2-4" strokeLinecap="round"/>
+        <path d="M8 16h8" strokeLinecap="round"/>
+      </svg>
+    ),
+    check: ( // circle checkmark
+      <svg viewBox="0 0 32 32" style={s}>
+        <circle cx="16" cy="16" r="12"/>
+        <path d="M10 16l4 4 8-8" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+    key: ( // magnifying glass with key
+      <svg viewBox="0 0 32 32" style={s}>
+        <circle cx="14" cy="14" r="8"/>
+        <path d="M20 20l8 8" strokeLinecap="round"/>
+        <path d="M11 14h6M14 11v6" strokeLinecap="round"/>
+      </svg>
+    ),
+    chat: ( // speech bubble
+      <svg viewBox="0 0 32 32" style={s}>
+        <path d="M4 6h24a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H10l-6 4V8a2 2 0 0 1 2-2z" strokeLinejoin="round"/>
+      </svg>
+    ),
+    map: ( // folded map
+      <svg viewBox="0 0 32 32" style={s}>
+        <path d="M2 6l10 4 8-4 10 4v18l-10-4-8 4-10-4V6z" strokeLinejoin="round"/>
+        <path d="M12 10v18M20 6v18" strokeLinecap="round"/>
+      </svg>
+    ),
+    tag: ( // price tag
+      <svg viewBox="0 0 32 32" style={s}>
+        <path d="M17 3h12v12L16 28 4 16 17 3z" strokeLinejoin="round"/>
+        <circle cx="23" cy="9" r="2" fill="currentColor" stroke="none"/>
+      </svg>
+    ),
+  };
+  return icons[icon] || null;
+};
+
 function Avatar({ review }) {
   if (review.avatar) {
     return <img className="rv__avatar rv__avatar--img" src={review.avatar} alt={review.name} />;
@@ -88,11 +133,14 @@ export default function Reviews({ data }) {
           </div>
         </div>
 
-        {/* Category scores */}
+        {/* Category scores with icons */}
         {ratingCategories.map(cat => (
           <div className="rv__cat" key={cat.label}>
             <div className="rv__cat-label">{cat.label}</div>
             <div className="rv__cat-score">{cat.score.toFixed(1)}</div>
+            <div className="rv__cat-icon">
+              <CatIcon icon={cat.icon} />
+            </div>
           </div>
         ))}
       </div>

@@ -1,62 +1,141 @@
 .loc { padding: 48px 0; border-top: 1px solid var(--line-soft); }
-.loc__title { font-size: 22px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
-.loc__place { font-size: 15px; color: var(--text-secondary); margin-bottom: 20px; }
 
+/* Heading */
+.loc__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+/* "Candolim, Goa, India" — blue link style */
+.loc__place {
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+/* ── Map container ── */
 .loc__map-wrap {
   position: relative;
-  height: 480px;
-  border-radius: var(--radius-md);
+  height: 380px;
+  border-radius: 16px;
   overflow: hidden;
-  background: #e5e5e5;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
 }
-.loc__map { width: 100%; height: 100%; }
-.loc__map iframe { width: 100%; height: 100%; display: block; }
 
+/* SVG fills the whole container */
+.loc__map-bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+/* House marker pin — centered */
+.loc__pin {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  background: #222;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+  z-index: 2;
+}
+.loc__pin svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Search icon — top LEFT */
 .loc__search-btn {
-  position: absolute; top: 12px; right: 12px;
-  width: 36px; height: 36px;
-  background: white; border-radius: 50%;
-  box-shadow: var(--shadow-md);
-  display: flex; align-items: center; justify-content: center;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--text-primary);
+  z-index: 2;
+  transition: box-shadow var(--transition-fast);
 }
-.loc__search-btn svg { width: 16px; height: 16px; }
+.loc__search-btn:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.loc__search-btn svg { width: 13px; height: 13px; }
 
+/* Zoom controls — top RIGHT */
 .loc__zoom {
-  position: absolute; bottom: 64px; right: 12px;
-  display: flex; flex-direction: column;
-  border: 1px solid var(--line-soft);
-  border-radius: var(--radius-sm);
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  z-index: 2;
 }
 .loc__zoom-btn {
-  width: 36px; height: 36px; background: white;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--text-primary); border-bottom: 1px solid var(--line-soft);
+  width: 30px;
+  height: 30px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  border-bottom: 1px solid #d0d0d0;
   transition: background var(--transition-fast);
 }
 .loc__zoom-btn:last-child { border-bottom: none; }
-.loc__zoom-btn:hover { background: var(--bg-light); }
-.loc__zoom-btn svg { width: 16px; height: 16px; }
+.loc__zoom-btn:hover { background: #f5f5f5; }
+.loc__zoom-btn svg { width: 13px; height: 13px; }
 
-.loc__home-pin {
-  position: absolute; bottom: 12px; right: 12px;
-  width: 36px; height: 36px; background: white;
-  border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);
-  display: flex; align-items: center; justify-content: center;
+/* ── Below map ── */
+/* "Exact location…" — blue text, not grey */
+.loc__disclaimer {
+  font-size: 14px;
   color: var(--text-primary);
+  margin-bottom: 20px;
 }
-.loc__home-pin svg { width: 20px; height: 20px; }
 
-.loc__disclaimer { font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; }
-.loc__highlight-title { font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
-.loc__highlight-text { font-size: 15px; color: var(--text-primary); line-height: 1.6; margin-bottom: 16px; }
+/* "Neighbourhood highlights" — bold heading */
+.loc__highlight-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.loc__highlight-text {
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
 .loc__show-more {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 15px; font-weight: 600; text-decoration: underline;
-  color: var(--text-primary); transition: opacity var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--text-primary);
+  transition: opacity var(--transition-fast);
   margin-top: 18px;
 }
 .loc__show-more:hover { opacity: 0.7; }

@@ -327,9 +327,6 @@
 
 /* Calendar */
 .pd__cal-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   margin-bottom: 24px;
 }
 .pd__cal-title {
@@ -342,9 +339,13 @@
   color: var(--text-secondary);
   margin-top: 4px;
 }
-.pd__cal-nav {
+
+/* Months + flanking nav arrows */
+.pd__cal-months-nav {
   display: flex;
+  align-items: flex-start;
   gap: 8px;
+  margin-bottom: 8px;
 }
 .pd__cal-nav-btn {
   width: 36px;
@@ -354,6 +355,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  margin-top: 4px;
   transition: background var(--transition-fast);
   color: var(--text-primary);
 }
@@ -368,13 +371,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
+  flex: 1;
 }
 .pd__cal-month { }
 .pd__cal-month-name {
   font-size: 15px;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   color: var(--text-primary);
 }
 .pd__cal-days-head {
@@ -387,6 +391,7 @@
   font-size: 12px;
   color: var(--text-secondary);
   font-weight: 500;
+  padding: 4px 0;
 }
 .pd__cal-grid {
   display: grid;
@@ -394,7 +399,7 @@
   gap: 2px;
 }
 .pd__cal-day {
-  height: 40px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -404,7 +409,7 @@
   cursor: pointer;
   transition: background var(--transition-fast);
 }
-.pd__cal-day:not(.pd__cal-day--empty):hover {
+.pd__cal-day:not(.pd__cal-day--empty):not(.pd__cal-day--unavail):hover {
   background: var(--bg-light);
 }
 .pd__cal-day--empty { cursor: default; }
@@ -419,14 +424,29 @@
   border-radius: 50%;
 }
 .pd__cal-day--range {
-  background: var(--bg-light);
+  background: #f0f0f0;
   border-radius: 0;
 }
+.pd__cal-day--unavail {
+  color: #aaa;
+  text-decoration: line-through;
+  cursor: default;
+  pointer-events: none;
+}
 
+/* Clear row */
 .pd__cal-clear-row {
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-soft);
+}
+.pd__cal-keyboard-icon {
+  display: flex;
+  color: var(--text-primary);
+  opacity: 0.6;
 }
 .pd__cal-clear-btn {
   font-size: 14px;
@@ -435,4 +455,5 @@
   text-decoration: underline;
   transition: opacity var(--transition-fast);
 }
-.pd__cal-clear-btn:hover { opacity: 0.7; }
+.pd__cal-clear-btn:hover { opacity: 0.6; }
+

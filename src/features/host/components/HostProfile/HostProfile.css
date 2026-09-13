@@ -1,73 +1,186 @@
 .hp { padding: 48px 0; border-top: 1px solid var(--line-soft); }
-.hp__section-title { font-size: 22px; font-weight: 600; color: var(--text-primary); margin-bottom: 32px; }
+.hp__section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 32px;
+}
 
-.hp__layout { display: flex; gap: 48px; }
+/* ── Top-level layout: left col | right col ── */
+.hp__layout { display: flex; gap: 48px; align-items: flex-start; }
 
-/* Left card */
-.hp__main-card {
-  width: 280px;
+/* Left column: card + details below */
+.hp__left-col {
   flex-shrink: 0;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Card ── */
+.hp__main-card {
   border: 1px solid var(--line-soft);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  box-shadow: var(--shadow-lg);
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Avatar + name — left side of card */
+.hp__host-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 8px;
+  flex: 1;
 }
-.hp__host-info { display: flex; flex-direction: column; align-items: center; gap: 8px; }
-.hp__avatar-wrap { position: relative; }
-.hp__avatar { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; }
+.hp__avatar-wrap { position: relative; flex-shrink: 0; }
+.hp__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .hp__verified-badge {
-  position: absolute; bottom: 0; right: 0;
-  width: 28px; height: 28px; color: var(--color-primary);
-  background: white; border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: -2px;
+  width: 24px;
+  height: 24px;
+  color: var(--color-primary);
+  background: white;
+  border-radius: 50%;
 }
-.hp__name { font-size: 22px; font-weight: 700; color: var(--text-primary); }
-.hp__role { font-size: 14px; color: var(--text-secondary); }
+.hp__name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  line-height: 1.25;
+}
+.hp__role {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-align: center;
+}
 
-.hp__stats { display: flex; gap: 16px; border-top: 1px solid var(--line-soft); padding-top: 20px; width: 100%; }
-.hp__stat { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; }
-.hp__stat-val { font-size: 20px; font-weight: 700; color: var(--text-primary); }
-.hp__stat-label { font-size: 12px; color: var(--text-secondary); }
+/* Stats — right side of card, stacked vertically with dividers */
+.hp__stats {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.hp__stat {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.hp__stat--last {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.hp__stat-val {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+.hp__stat-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
 
-/* Right */
+/* ── Born / School — below card ── */
+.hp__details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hp__detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+.hp__detail-icon { width: 18px; height: 18px; flex-shrink: 0; color: var(--text-secondary); }
+
+/* ── Right column ── */
 .hp__right { flex: 1; }
-.hp__details { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
-.hp__detail { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--text-primary); }
-.hp__detail-icon { width: 20px; height: 20px; flex-shrink: 0; }
 
-.hp__cohost-title { font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 12px; }
-.hp__cohosts { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
-.hp__cohost { display: flex; align-items: center; gap: 8px; }
-.hp__cohost-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+/* Co-hosts */
+.hp__cohost-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+.hp__cohosts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px 16px;
+  margin-bottom: 24px;
+}
+.hp__cohost { display: flex; align-items: center; gap: 10px; }
+.hp__cohost-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 .hp__cohost-initial {
-  display: flex; align-items: center; justify-content: center;
-  font-size: 14px; font-weight: 600; flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
 }
 .hp__cohost-name { font-size: 14px; color: var(--text-primary); }
 
-.hp__response-title { font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
-.hp__response-text { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px; }
+/* Host details */
+.hp__response-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+.hp__response-text {
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
 
+/* Message button */
 .hp__message-btn {
-  padding: 12px 28px;
+  padding: 12px 24px;
   border: 1px solid var(--text-primary);
   border-radius: var(--radius-sm);
-  font-size: 15px; font-weight: 600;
-  color: var(--text-primary); background: white;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: white;
   transition: background var(--transition-fast);
   display: inline-block;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 .hp__message-btn:hover { background: var(--bg-light); }
 
+/* Safety notice */
 .hp__safety {
-  display: flex; align-items: flex-start; gap: 12px;
-  font-size: 13px; color: var(--text-secondary);
-  border: 1px solid var(--line-soft);
-  border-radius: var(--radius-sm);
-  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-secondary);
 }
-.hp__safety-icon { width: 24px; height: 24px; flex-shrink: 0; }
+.hp__safety-icon { width: 20px; height: 20px; flex-shrink: 0; margin-top: 1px; }
