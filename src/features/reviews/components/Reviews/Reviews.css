@@ -24,7 +24,7 @@
 }
 
 .rv__laurel-score {
-  font-size: 64px;
+  font-size: 74px;
   font-weight: 700;
   color: var(--text-primary, #222);
   line-height: 1;
@@ -175,7 +175,7 @@
   height: 24px;
   stroke: var(--text-primary, #222);
   fill: none;
-  stroke-width: 1.5;
+  stroke-width: 2.5;
   overflow: visible;
 }
 
@@ -183,7 +183,7 @@
 
 .rv__chips {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
   overflow-x: auto;
@@ -205,7 +205,7 @@
   border: 1px solid #dddddd;
   border-radius: 999px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--text-primary, #222);
   white-space: nowrap;
   background: #ffffff;

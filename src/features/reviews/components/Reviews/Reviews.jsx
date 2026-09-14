@@ -4,7 +4,7 @@ import { StarIcon } from '../../../../components/Icons.jsx';
 
 /* ── Per-category icons ── */
 const CatIcon = ({ icon }) => {
-  const s = { display: 'block', width: 24, height: 24, fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, overflow: 'visible' };
+  const s = { display: 'block', width: 24, height: 24, fill: 'none', stroke: 'currentColor', strokeWidth: 2.5, overflow: 'visible' };
   const icons = {
     clean: ( // spray bottle
       <svg viewBox="0 0 32 32" style={s}>
