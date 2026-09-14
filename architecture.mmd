@@ -1,51 +1,69 @@
-graph TD
-    %% Main Application Layer
-    subgraph App[React SPA Application]
-        A[App.jsx\nRoot Component]
-        A --> Header[Header Component]
-        A --> Nav[StickyNav Component]
-        A --> Hero[HeroGrid Component]
-        A --> Details[PropertyDetails Component]
-        A --> Booking[BookingWidget Component]
-        A --> Reviews[Reviews Component]
-        A --> Location[Location Component]
-        A --> Host[HostProfile Component]
-        A --> TTK[ThingsToKnow Component]
-        A --> Similar[SimilarListings Component]
-        
-        %% Modals and Overlays
-        A -.-> PhotoTour[PhotoTour Overlay]
-        A -.-> Lightbox[Lightbox Modal]
-        A -.-> Amenities[Amenities Modal]
-    end
+flowchart TB
+  U[Guests and hosts<br/>Web browsers and mobile clients] --> DNS[DNS + TLS<br/>Global traffic routing]
+  DNS --> CDN[CDN / Edge network<br/>Static assets, images, cache headers]
+  CDN --> FE[Frontend hosting<br/>React SPA + SSR-ready web tier]
+  FE --> WAF[WAF + API Gateway<br/>Rate limits, auth, request validation]
 
-    %% Data Layer
-    subgraph Data[Data Layer]
-        JSON[listing.json\nStatic Data Store]
-        Proxy[imageProxy.js\nImage Resolution]
-    end
+  subgraph Services[Horizontally scalable backend services]
+    Listing[Listing service]
+    Booking[Booking service<br/>Idempotency + concurrency control]
+    User[Identity and profile service]
+    Payment[Payment adapter]
+    Review[Review service]
+    Notify[Notification worker]
+  end
 
-    %% State Management
-    subgraph State[Local State Management]
-        A_State[App State:\nModal Visibility]
-        B_State[Booking State:\nSelected Dates/Guests]
-        L_State[Lightbox State:\nCurrent Image Index]
-    end
+  WAF --> Listing
+  WAF --> Booking
+  WAF --> User
+  WAF --> Review
+  Booking --> Payment
+  Booking --> Events[(Event bus / queue)]
+  Events --> Notify
+  Events --> Indexer[Search indexer worker]
 
-    %% Connections
-    JSON -->|Injects Data| A
-    JSON -->|Injects Data| Details
-    JSON -->|Injects Data| Reviews
-    JSON -->|Injects Data| Host
-    JSON -->|Injects Data| Booking
-    Proxy -->|Resolves URLs| Hero
-    Proxy -->|Resolves URLs| PhotoTour
-    
-    %% Styling
-    subgraph Styles[CSS Architecture]
-        Global[index.css\nDesign Tokens & Reset]
-        CompCSS[Component CSS Modules]
-    end
-    
-    Global -.->|Applies Variables| CompCSS
-    CompCSS -.->|Styles| App
+  subgraph Data[Durable storage and performance layer]
+    SQL[(Primary relational database<br/>Multi-AZ, read replicas, backups)]
+    Cache[(Redis cluster<br/>Sessions, hot listings, rate limits)]
+    Blob[(Object storage<br/>Photos, documents, lifecycle rules)]
+    Search[(Search cluster<br/>Geo, filters, availability facets)]
+  end
+
+  Listing --> SQL
+  Booking --> SQL
+  User --> SQL
+  Review --> SQL
+  Listing --> Cache
+  Booking --> Cache
+  Listing --> Blob
+  CDN --> Blob
+  Indexer --> Search
+  WAF --> Search
+
+  subgraph Delivery[Deployment and operations]
+    Git[Git repository] --> CI[CI pipeline<br/>Tests, lint, security scan]
+    CI --> Registry[Container / artifact registry]
+    Registry --> Deploy[Blue-green or rolling deployment]
+    Deploy --> FE
+    Deploy --> Services
+    Deploy --> Workers[Autoscaled workers]
+    Services --> Obs[Logs, metrics, traces, alerts]
+    FE --> Obs
+  end
+
+  classDef edge fill:#e8f1ff,stroke:#2563eb,color:#0f172a
+  classDef service fill:#ecfdf5,stroke:#059669,color:#0f172a
+  classDef data fill:#fff7ed,stroke:#ea580c,color:#0f172a
+  classDef ops fill:#f5f3ff,stroke:#7c3aed,color:#0f172a
+  class DNS,CDN,FE,WAF edge
+  class Listing,Booking,User,Payment,Review,Notify,Indexer service
+  class SQL,Cache,Blob,Search data
+  class Git,CI,Registry,Deploy,Workers,Obs ops
+
+  %% Scaling notes:
+  %% - CDN and stateless frontend/backend instances scale horizontally.
+  %% - Booking writes use transactions, idempotency keys, and row-level locks.
+  %% - Read replicas and Redis absorb read traffic; object storage offloads media.
+  %% - Search is eventually consistent and rebuilt from the event stream.
+  %% - Multi-AZ backups, health checks, observability, and blue-green releases support resilience.
+      

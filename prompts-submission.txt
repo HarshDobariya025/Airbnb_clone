@@ -1,0 +1,42 @@
+AI-ASSISTED DEVELOPMENT PROMPT SEQUENCE
+Airbnb Clone / Vacation-Rental Listing Experience
+
+This document records the prompt sequence used during AI-assisted development. The prompts are grouped by outcome so the development process can be reviewed or reproduced.
+
+PHASE 1 — PROJECT SETUP AND CONTENT MODEL
+1. Set up a new Vite + React project with a standard structure for components, data, styles, and utilities.
+2. Analyze the reference vacation-rental listing experience and extract the complete property data model into a static listing.json file, including property details, amenities, host information, and reviews.
+3. Create an imageProxy.js utility to resolve image requests to stable CDN URLs and avoid local image-download rate limits.
+4. Extract reusable SVG icon paths from the reference experience into an Icons.jsx component.
+5. Create index.css with the global design system: variables, typography, spacing, colors, resets, and responsive defaults.
+
+PHASE 2 — CORE LAYOUT AND NAVIGATION
+6. Implement Header.jsx and its styles with top navigation, search controls, responsive behavior, and sticky positioning.
+7. Implement StickyNav.jsx and its styles so section links highlight while scrolling using IntersectionObserver.
+8. Implement HeroGrid.jsx and its styles as a responsive five-image property gallery with hover states and accessible labels.
+9. Create the main App.jsx layout using a responsive two-column structure for property information and the booking widget.
+
+PHASE 3 — PROPERTY DETAILS AND BOOKING
+10. Implement PropertyDetails.jsx and its styles with title, guest-favorite badge, host summary, highlights, description expansion, sleeping arrangements, amenities preview, and calendar.
+11. Implement BookingWidget.jsx and its styles with sticky pricing, date and guest selectors, discount messaging, reserve action, and report-listing link.
+
+PHASE 4 — BELOW-THE-FOLD EXPERIENCE
+12. Implement Reviews.jsx with rating breakdown bars, keyword chips, responsive review cards, and show-more interactions.
+13. Implement Location.jsx with an embedded OpenStreetMap view, accessible zoom controls, and neighborhood highlights.
+14. Implement HostProfile.jsx with host statistics, co-host details, response rates, and the safety notice.
+15. Implement ThingsToKnow.jsx as a three-column section for cancellation policies, house rules, and safety information.
+16. Implement SimilarListings.jsx as a responsive horizontal carousel with pagination controls and smooth transitions.
+
+PHASE 5 — MODALS AND OVERLAYS
+17. Implement AmenitiesModal.jsx with grouped amenity lists, focus management, Escape-key close behavior, and responsive presentation.
+18. Implement PhotoTour.jsx as a full-screen gallery overlay with section navigation and alternating one-image/two-image rows.
+19. Implement Lightbox.jsx as a dark single-image viewer with fade transitions, arrow-key navigation, and an image counter.
+
+PHASE 6 — INTEGRATION AND POLISH
+20. Update App.jsx to wire modal and overlay state for the photo tour, lightbox, and amenities modal.
+21. Update index.html with the final page title and SEO metadata.
+22. Generate an initial Mermaid component/data-flow diagram for implementation traceability.
+
+SUBMISSION NOTE
+The application implementation is intentionally preserved as completed. The production-scale architecture diagram is a theoretical deployment view and is separate from the current static demo data layer. It describes how the experience could evolve into a resilient marketplace with edge delivery, stateless services, relational storage, caching, object storage, search indexing, event-driven workers, observability, and CI/CD.
+      

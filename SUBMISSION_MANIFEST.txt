@@ -1,0 +1,23 @@
+AIRBNB CLONE — THEORETICAL SUBMISSION PACKAGE
+
+Included deliverables
+- Source code for the completed React/Vite vacation-rental listing application.
+- architecture.pdf — production-scale architecture diagram for frontend, backend, storage, search, and deployment.
+- architecture.mmd — editable Mermaid source for the architecture diagram.
+- prompts-submission.txt — sequence of AI-assisted development prompts.
+- README.md — project setup and application notes.
+
+Architecture coverage
+- Global DNS/TLS, CDN/edge delivery, frontend hosting, WAF/API gateway.
+- Horizontally scalable stateless backend services.
+- Relational primary database with replicas and backups.
+- Redis cache for hot reads, sessions, and rate limiting.
+- Object storage plus CDN for listing media.
+- Search cluster with an event-driven indexing worker.
+- Queue/event bus for notifications and asynchronous processing.
+- CI, artifact registry, blue-green/rolling deployment, and observability.
+
+Packaging notes
+- Generated dependency directories and build output are excluded from the ZIP.
+- The runtime application source is not changed for this theoretical submission.
+      
