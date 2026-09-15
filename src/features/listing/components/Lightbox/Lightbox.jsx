@@ -2,7 +2,7 @@ import { useEffect, useCallback } from 'react';
 import './Lightbox.css';
 import { GridIcon, CloseIcon, PrevLargeIcon, NextLargeIcon } from '../../../../components/Icons.jsx';
 
-export default function Lightbox({ images, currentIndex, onClose, onNavigate, onPhotoTour }) {
+export default function Lightbox({ images, currentIndex, onClose, onNavigate, onPhotoTour, imageRoomNames }) {
   const total = images.length;
 
   const goNext = useCallback(() => {
@@ -36,18 +36,23 @@ export default function Lightbox({ images, currentIndex, onClose, onNavigate, on
         <button className="lb__header-btn" type="button" aria-label="Show all photos" id="lbGrid" onClick={onPhotoTour}>
           <span className="lb__header-icon"><GridIcon /></span>
         </button>
-        <div className="lb__counter" id="lbCounter">
-          {currentIndex + 1} / {total}
+        <div className="lb__room-name" id="lbRoomName">
+          {imageRoomNames ? imageRoomNames[currentIndex] : ''}
         </div>
-        <button
-          className="lb__header-btn lb__close"
-          type="button"
-          aria-label="Close"
-          id="lbClose"
-          onClick={onPhotoTour}
-        >
-          <span className="lb__header-icon"><CloseIcon /></span>
-        </button>
+        <div className="lb__header-right">
+          <span className="lb__counter" id="lbCounter">
+            {currentIndex + 1} of {total}
+          </span>
+          <button
+            className="lb__header-btn lb__close"
+            type="button"
+            aria-label="Close"
+            id="lbClose"
+            onClick={onPhotoTour}
+          >
+            <span className="lb__header-icon"><CloseIcon /></span>
+          </button>
+        </div>
       </header>
 
       {/* Prev button */}

@@ -1,142 +1,575 @@
-.loc { padding: 48px 0; border-top: 1px solid var(--line-soft); }
+/* =========================================================
+   LOCATION SECTION
+   ========================================================= */
 
-/* Heading */
+.loc {
+  width: calc(100% + 8px);
+
+  margin-left: -12px;
+
+  padding: 0 0 48px;
+
+  border-top: 1px solid var(--line-soft);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LOCATION HEADING
+   ========================================================= */
+
 .loc__title {
-  font-size: 22px;
+  margin: 45px 0 8px;
+
+  padding: 0;
+
+  font-size: 26px;
+  line-height: 32px;
   font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 6px;
+
+  letter-spacing: -0.35px;
+
+  color: #222222;
+
+  box-sizing: border-box;
 }
 
-/* "Candolim, Goa, India" — blue link style */
+
+/* =========================================================
+   LOCATION NAME
+   ========================================================= */
+
 .loc__place {
-  font-size: 14px;
-  color: var(--text-primary);
-  margin-bottom: 16px;
+  margin: 0 0 30px;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+
+  color: #222222;
+
+  box-sizing: border-box;
 }
 
-/* ── Map container ── */
+
+/* =========================================================
+   MAP
+   ========================================================= */
+
 .loc__map-wrap {
-  position: relative;
-  height: 380px;
-  border-radius: 16px;
+  position: relative !important;
+
+  width: 100%;
+
+  /* Reduced from 567px to match reference */
+  height: 535px;
+
+  margin: 0 0 32px;
+  padding: 0;
+
   overflow: hidden;
-  margin-bottom: 20px;
-  border: 1px solid #e0e0e0;
+
+  border: 1px solid #dddddd;
+  border-radius: 16px;
+
+  background: #e8f0e4;
+
+  box-sizing: border-box;
 }
 
-/* SVG fills the whole container */
+
+/* =========================================================
+   MAP SVG
+   ========================================================= */
+
 .loc__map-bg {
-  display: block;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
   width: 100%;
   height: 100%;
-  position: absolute;
-  inset: 0;
+
+  display: block;
+
+  pointer-events: none;
+
+  box-sizing: border-box;
 }
 
-/* House marker pin — centered */
+
+/* =========================================================
+   HOUSE MARKER
+   ========================================================= */
+
 .loc__pin {
-  position: absolute;
-  top: 50%;
-  left: 55%;
+  position: absolute !important;
+
+  top: 50% !important;
+  left: 50% !important;
+
+  right: auto !important;
+  bottom: auto !important;
+
+  width: 56px;
+  height: 56px;
+
+  margin: 0 !important;
+  padding: 0;
+
   transform: translate(-50%, -50%);
-  width: 44px;
-  height: 44px;
-  background: #222;
-  border-radius: 50%;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
-  z-index: 2;
-}
-.loc__pin svg {
-  width: 22px;
-  height: 22px;
+
+  background: #222222;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.25),
+    0 5px 12px rgba(0, 0, 0, 0.16);
+
+  z-index: 10;
+
+  box-sizing: border-box;
 }
 
-/* Search icon — top LEFT */
+
+/* Material UI house icon */
+
+.loc__pin-icon {
+  width: 25px !important;
+  height: 25px !important;
+
+  color: #ffffff;
+
+  stroke-width: 1.5;
+
+  display: block;
+}
+
+
+/* =========================================================
+   SEARCH BUTTON
+   ========================================================= */
+
 .loc__search-btn {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 36px;
-  height: 36px;
-  background: white;
-  border-radius: 50%;
-  border: 1px solid #d0d0d0;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  position: absolute !important;
+
+  top: 23px !important;
+  left: 23px !important;
+
+  right: auto !important;
+  bottom: auto !important;
+
+  width: 48px;
+  height: 48px;
+
+  margin: 0 !important;
+  padding: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-primary);
-  z-index: 2;
-  transition: box-shadow var(--transition-fast);
-}
-.loc__search-btn:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-.loc__search-btn svg { width: 16px; height: 16px; }
 
-/* Zoom controls — top RIGHT */
+  border: none;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #222222;
+
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.14),
+    0 2px 7px rgba(0, 0, 0, 0.08);
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  box-sizing: border-box;
+
+  transition:
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+
+.loc__search-btn svg {
+  width: 24px;
+  height: 24px;
+
+  display: block;
+}
+
+
+.loc__search-btn:hover {
+  box-shadow:
+    0 2px 7px rgba(0, 0, 0, 0.18),
+    0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.loc__search-btn:active {
+  transform: scale(0.96);
+}
+
+
+/* =========================================================
+   ZOOM CONTROL
+   ========================================================= */
+
 .loc__zoom {
-  position: absolute;
-  top: 12px;
-  right: 12px;
+  position: absolute !important;
+
+  top: 23px !important;
+  right: 23px !important;
+
+  left: auto !important;
+  bottom: auto !important;
+
+  width: 46px;
+
+  margin: 0 !important;
+  padding: 0;
+
   display: flex;
   flex-direction: column;
-  border: 1px solid #d0d0d0;
-  border-radius: 6px;
+
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  z-index: 2;
+
+  background: #ffffff;
+
+  border: 1px solid #dddddd;
+  border-radius: 9px;
+
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.14),
+    0 2px 7px rgba(0, 0, 0, 0.08);
+
+  z-index: 20;
+
+  box-sizing: border-box;
 }
+
+
+/* =========================================================
+   ZOOM BUTTONS
+   ========================================================= */
+
 .loc__zoom-btn {
-  width: 32px;
-  height: 32px;
-  background: white;
+  position: static !important;
+
+  width: 46px;
+  height: 43px;
+
+  margin: 0;
+  padding: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-primary);
-  border-bottom: 1px solid #d0d0d0;
-  transition: background var(--transition-fast);
-}
-.loc__zoom-btn:last-child { border-bottom: none; }
-.loc__zoom-btn:hover { background: #f5f5f5; }
-.loc__zoom-btn svg { width: 14px; height: 14px; }
 
-/* ── Below map ── */
-/* "Exact location…" — blue text, not grey */
+  border: none;
+
+  background: #ffffff;
+
+  color: #222222;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition: background 0.15s ease;
+}
+
+
+.loc__zoom-btn:first-child {
+  border-bottom: 1px solid #dddddd;
+}
+
+
+.loc__zoom-btn:last-child {
+  border-bottom: none;
+}
+
+
+.loc__zoom-btn svg {
+  width: 22px;
+  height: 22px;
+
+  display: block;
+}
+
+
+.loc__zoom-btn:hover {
+  background: #f7f7f7;
+}
+
+
+/* =========================================================
+   EXACT LOCATION TEXT
+   ========================================================= */
+
 .loc__disclaimer {
-  font-size: 14px;
-  color: var(--text-primary);
-  margin-bottom: 20px;
+  margin: 0 0 35px;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+
+  color: #222222;
+
+  box-sizing: border-box;
 }
 
-/* "Neighbourhood highlights" — bold heading */
+
+/* =========================================================
+   NEIGHBOURHOOD HIGHLIGHTS HEADING
+   ========================================================= */
+
 .loc__highlight-title {
+  margin: 0 0 11px;
+  padding: 0;
+
   font-size: 16px;
+  line-height: 22px;
   font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 8px;
+
+  color: #222222;
+
+  box-sizing: border-box;
 }
+
+
+/* =========================================================
+   NEIGHBOURHOOD DESCRIPTION
+   ========================================================= */
 
 .loc__highlight-text {
-  font-size: 15px;
-  color: var(--text-primary);
-  line-height: 1.6;
-  margin-bottom: 16px;
+  margin: 0 0 18px;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #222222;
+
+  box-sizing: border-box;
 }
 
+
+/* =========================================================
+   SHOW MORE
+   ========================================================= */
+
 .loc__show-more {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 15px;
+
+  gap: 7px;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #222222;
+
+  font-family: inherit;
+
+  font-size: 16px;
+  line-height: 22px;
   font-weight: 600;
-  text-decoration: underline;
-  color: var(--text-primary);
-  transition: opacity var(--transition-fast);
-  margin-top: 18px;
+
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition: opacity 0.15s ease;
 }
-.loc__show-more:hover { opacity: 0.7; }
-.loc__chevron { display: inline-flex; width: 12px; height: 12px; }
+
+
+.loc__show-more:hover {
+  opacity: 0.65;
+}
+
+
+/* =========================================================
+   CHEVRON
+   ========================================================= */
+
+.loc__chevron {
+  width: 10px;
+  height: 10px;
+
+  display: inline-flex;
+  flex: 0 0 10px;
+
+  color: #222222;
+}
+
+
+.loc__chevron svg {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  fill: currentColor;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1200px) {
+  .loc {
+    width: calc(100% + 8px);
+    margin-left: -12px;
+  }
+
+  .loc__map-wrap {
+    /*
+     * Exact reduced desktop map height
+     */
+    height: 535px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1199px) {
+  .loc {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .loc__map-wrap {
+    height: 500px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .loc {
+    width: 100%;
+    margin-left: 0;
+
+    padding-bottom: 32px;
+  }
+
+
+  .loc__title {
+    margin-top: 8px;
+
+    font-size: 24px;
+    line-height: 30px;
+
+    letter-spacing: -0.25px;
+  }
+
+
+  .loc__place {
+    margin-bottom: 24px;
+
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+
+  .loc__map-wrap {
+    height: 400px;
+
+    margin-bottom: 24px;
+
+    border-radius: 14px;
+  }
+
+
+  .loc__search-btn {
+    top: 16px !important;
+    left: 16px !important;
+
+    width: 44px;
+    height: 44px;
+  }
+
+
+  .loc__search-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .loc__zoom {
+    top: 16px !important;
+    right: 16px !important;
+
+    width: 42px;
+  }
+
+
+  .loc__zoom-btn {
+    width: 42px;
+    height: 40px;
+  }
+
+
+  .loc__zoom-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .loc__pin {
+    width: 52px;
+    height: 52px;
+  }
+
+
+  .loc__pin-icon {
+    width: 23px !important;
+    height: 23px !important;
+  }
+
+
+  .loc__disclaimer {
+    margin-bottom: 28px;
+
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+
+  .loc__highlight-title {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+
+  .loc__highlight-text {
+    font-size: 15px;
+    line-height: 23px;
+  }
+}

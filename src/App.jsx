@@ -32,6 +32,18 @@ export default function App() {
 
   const allImages = useMemo(() => flattenImages(listing.photoTour), []);
 
+  // Map each hero image URL → its index in allImages (for correct lightbox position)
+  const heroToAllIdx = useMemo(
+    () => listing.heroImages.map(src => allImages.indexOf(src)),
+    [allImages]
+  );
+
+  // Map each allImages index → room name (for lightbox header)
+  const imageRoomNames = useMemo(
+    () => listing.photoTour.flatMap(room => room.images.map(() => room.room)),
+    []
+  );
+
   const openLightbox = (index) => {
     setLightboxIndex(index);
     setLightboxOpen(true);
@@ -64,7 +76,7 @@ export default function App() {
           <HeroGrid
             images={listing.heroImages}
             title={listing.title}
-            onImageClick={(i) => openPhotoTourAndLightbox(i)}
+            onImageClick={(i) => openPhotoTourAndLightbox(heroToAllIdx[i] ?? i)}
             onShowAll={() => setPhotoTourOpen(true)}
           />
 
@@ -109,6 +121,7 @@ export default function App() {
           onClose={() => setLightboxOpen(false)}
           onNavigate={setLightboxIndex}
           onPhotoTour={() => navigate('/photo-tour')}
+          imageRoomNames={imageRoomNames}
         />
       )}
 

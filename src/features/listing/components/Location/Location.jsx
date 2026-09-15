@@ -1,75 +1,163 @@
 import './Location.css';
 
+import SearchIcon from '@mui/icons-material/Search';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+
 export default function Location({ data }) {
   return (
     <section className="loc" id="location">
       <h2 className="loc__title">Where you'll be</h2>
-      <div className="loc__place">{data.label}</div>
+
+      <div className="loc__place">
+        {data.label}
+      </div>
 
       {/* Static mock map — no live API needed */}
       <div className="loc__map-wrap">
-        {/* SVG map background: water left, land right */}
+
+        {/* Map background */}
         <svg
           className="loc__map-bg"
           viewBox="0 0 860 380"
           xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid slice"
+          preserveAspectRatio="none"
+          aria-hidden="true"
         >
-          {/* Land background */}
-          <rect width="860" height="380" fill="#e8f0e4" />
-          {/* Water area (left) */}
-          <path d="M0 0 L320 0 L260 140 L310 200 L260 280 L300 380 L0 380 Z" fill="#b8d4e8" />
-          {/* Subtle grid lines */}
-          {[1,2,3,4,5,6,7,8].map(i => (
-            <line key={`v${i}`} x1={i*110} y1="0" x2={i*110} y2="380" stroke="#d8e8d4" strokeWidth="1" />
-          ))}
-          {[1,2,3].map(i => (
-            <line key={`h${i}`} x1="0" y1={i*95} x2="860" y2={i*95} stroke="#d8e8d4" strokeWidth="1" />
-          ))}
-          {/* Faint circle overlays (radius indicators) */}
-          <circle cx="490" cy="195" r="70" fill="#c8dfc4" fillOpacity="0.5" />
-          <circle cx="600" cy="240" r="90" fill="#c8dfc4" fillOpacity="0.35" />
+          {/* Land */}
+          <rect
+            x="0"
+            y="0"
+            width="860"
+            height="380"
+            fill="#e8f0e4"
+          />
+
+          {/* Subtle map grid */}
+          <defs>
+            <pattern
+              id="mapGrid"
+              width="40"
+              height="40"
+              patternUnits="userSpaceOnUse"
+            >
+              <path
+                d="M 40 0 L 0 0 0 40"
+                fill="none"
+                stroke="#d8e2d5"
+                strokeWidth="0.8"
+              />
+            </pattern>
+          </defs>
+
+          <rect
+            x="0"
+            y="0"
+            width="860"
+            height="380"
+            fill="url(#mapGrid)"
+            opacity="0.65"
+          />
+
+          {/* Water */}
+          <path
+            d="
+              M0 0
+              L332 0
+              L282 140
+              L320 200
+              L282 280
+              L305 380
+              L0 380
+              Z
+            "
+            fill="#a9cee7"
+          />
+
+          {/* Area indicator circles */}
+          <circle
+            cx="438"
+            cy="156"
+            r="38"
+            fill="#c8dfc4"
+            fillOpacity="0.72"
+          />
+
+          <circle
+            cx="610"
+            cy="232"
+            r="52"
+            fill="#c8dfc4"
+            fillOpacity="0.62"
+          />
         </svg>
 
-        {/* House marker pin — center */}
+        {/* House marker */}
         <div className="loc__pin">
-          <svg viewBox="0 0 32 32" fill="white" aria-hidden="true">
-            <path d="M6 29h20M9 29V15l7-6 7 6v14M13 29v-7h6v7" stroke="white" strokeWidth="2" fill="none" />
-          </svg>
+          <HomeOutlinedIcon className="loc__pin-icon" />
         </div>
 
-        {/* Search icon — top left */}
-        <button className="loc__search-btn" aria-label="Search area">
-          <svg viewBox="0 0 32 32" aria-hidden="true" style={{ display: 'block', height: '100%', width: '100%', fill: 'none', stroke: 'currentColor', strokeWidth: 3 }}>
-            <circle cx="14" cy="14" r="9"/><path d="M21 21l7 7"/>
-          </svg>
+        {/* Search button */}
+        <button
+          className="loc__search-btn"
+          aria-label="Search area"
+          type="button"
+        >
+          <SearchIcon />
         </button>
 
-        {/* Zoom controls — top right */}
+        {/* Zoom controls */}
         <div className="loc__zoom">
-          <button aria-label="Zoom in" className="loc__zoom-btn">
-            <svg viewBox="0 0 32 32" style={{ display: 'block', height: '100%', width: '100%', fill: 'none', stroke: 'currentColor', strokeWidth: 3 }}>
-              <path d="M16 6v20M6 16h20"/>
-            </svg>
+
+          <button
+            aria-label="Zoom in"
+            className="loc__zoom-btn"
+            type="button"
+          >
+            <AddIcon />
           </button>
-          <button aria-label="Zoom out" className="loc__zoom-btn">
-            <svg viewBox="0 0 32 32" style={{ display: 'block', height: '100%', width: '100%', fill: 'none', stroke: 'currentColor', strokeWidth: 3 }}>
-              <path d="M6 16h20"/>
-            </svg>
+
+          <button
+            aria-label="Zoom out"
+            className="loc__zoom-btn"
+            type="button"
+          >
+            <RemoveIcon />
           </button>
+
         </div>
       </div>
 
+      {/* Location disclaimer */}
       <div className="loc__disclaimer">
         Exact location will be provided after booking.
       </div>
-      <div className="loc__highlight-title">Neighbourhood highlights</div>
-      <div className="loc__highlight-text">{data.description}</div>
-      <button className="loc__show-more">
-        Show more{' '}
+
+      {/* Neighbourhood highlights */}
+      <div className="loc__highlight-title">
+        Neighbourhood highlights
+      </div>
+
+      <div className="loc__highlight-text">
+        {data.description}
+      </div>
+
+      <button
+        className="loc__show-more"
+        type="button"
+      >
+        <span>Show more</span>
+
         <span className="loc__chevron">
-          <svg viewBox="0 0 18 18" style={{ display: 'block', height: '100%', width: '100%', fill: 'currentColor' }}>
-            <path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fillRule="evenodd"/>
+          <svg
+            viewBox="0 0 18 18"
+            aria-hidden="true"
+          >
+            <path
+              d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z"
+              fillRule="evenodd"
+            />
           </svg>
         </span>
       </button>
