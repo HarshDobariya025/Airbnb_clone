@@ -29,11 +29,21 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
 }
 
-.hero-grid__cell:hover img {
-  transform: scale(1.04);
+/* Dark overlay on hover */
+.hero-grid__cell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.2s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-grid__cell:hover::after {
+  background-color: rgba(0, 0, 0, 0.12);
 }
 
 /* Cell 0 — spans full left column */
