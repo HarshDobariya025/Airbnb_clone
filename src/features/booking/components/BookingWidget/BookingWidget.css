@@ -34,7 +34,7 @@
 }
 .bw__discount-claim {
   padding: 8px 16px;
-  border: 1px solid var(--text-primary);
+  border: 1px solid var(--line-soft);
   border-radius: var(--radius-sm);
   font-size: 13px;
   font-weight: 600;
@@ -65,6 +65,7 @@
   font-size: 22px;
   font-weight: 700;
   color: var(--text-primary);
+  text-decoration: underline;
 }
 .bw__period {
   font-size: 15px;
@@ -131,6 +132,10 @@
   color: var(--text-primary);
   margin-bottom: 16px;
   line-height: 1.5;
+  background: var(--bg-light);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  text-align: center;
 }
 
 /* Reserve Button */
@@ -143,7 +148,7 @@
   font-size: 16px;
   font-weight: 700;
   text-align: center;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-full);
   border: none;
   cursor: pointer;
   transition: filter var(--transition-fast), transform var(--transition-fast);
